@@ -9,7 +9,7 @@ set backup_file=C:\xampp\htdocs\inventario\database\backups\backup_inventario_ws
 echo Creando backup de base de datos, no cierre esta ventana: %backup_file%
 
 :: Guarda los errores y hace el backup de MySQL
-"C:\xampp\mysql\bin\mysqldump.exe" -u wsl_bd_inventory -py8M6Rw3W5L&2JbHxj#S^Lc inventario_wsl > "%backup_file%" 2> error_log.txt
+"C:\xampp\mysql\bin\mysqldump.exe" -u root inventario_wsl > "%backup_file%" 2> error_log.txt
 
 :: Verifica si el backup se creó correctamente
 if not exist "%backup_file%" (
