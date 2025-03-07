@@ -34,3 +34,9 @@ Elimina el punto y coma ; al inicio de la línea para descomentarla, de modo que
 Guarda el archivo php.ini.
 Reinicia el servidor Apache desde el panel de control de XAMPP.
 Verificar si la extensión GD está habilitada
+
+
+3. Iniciar Sesión Inventario
+
+Usuario: wilmer321
+Contraseña: WilmerWSL987
