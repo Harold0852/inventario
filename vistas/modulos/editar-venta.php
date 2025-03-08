@@ -65,9 +65,15 @@
                     
                     <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                    <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $vendedor["nombre"]; ?>" readonly>
-
-                    <input type="hidden" name="idVendedor" value="<?php echo $vendedor["id"]; ?>">
+                    <select class="form-control" id="nuevoVendedor" name="nuevoVendedor">
+                      <?php
+                        $usuarios = ControladorUsuarios::ctrMostrarUsuarios(null, null);
+                        foreach ($usuarios as $key => $value) {
+                          $selected = ($value["id"] == $venta["id_vendedor"]) ? 'selected' : '';
+                          echo '<option value="'.$value["id"].'" '.$selected.'>'.$value["nombre"].'</option>';
+                        }
+                      ?>
+                    </select>
 
                   </div>
 
@@ -99,7 +105,7 @@
                     
                     <span class="input-group-addon"><i class="fa fa-users"></i></span>
                     
-                    <input type="text" class="form-control" id="editarClienteDescripcion" name="editarClienteDescripcion" value="<?php echo $venta["clienTe_descripcion"]; ?>" required>
+                    <input type="text" class="form-control" id="editarClienteDescripcion" name="editarClienteDescripcion" value="<?php echo $venta["clienTe_descripcion"]; ?>">
                   
                   </div>
                 

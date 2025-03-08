@@ -114,7 +114,7 @@ class ControladorVentas{
 			=============================================*/
 
 			$datos = array(
-				"id_vendedor" => $_POST["idVendedor"],
+				"id_vendedor" => $_POST["nuevoVendedor"],
 				"codigo" => $nuevoCodigo,
 				"productos" => $_POST["listaProductos"],
 				"neto" => $totalNeto,
@@ -341,7 +341,7 @@ class ControladorVentas{
 			GUARDAR CAMBIOS DE LA COMPRA
 			=============================================*/	
 
-			$datos = array("id_vendedor"=>$_POST["idVendedor"],
+			$datos = array("id_vendedor" => $_POST["nuevoVendedor"],
 						   "codigo"=>$_POST["editarVenta"],
 						   "productos"=>$listaProductos,
 						   "neto"=>$_POST["nuevoPrecioNeto"],

@@ -64,9 +64,14 @@ if($_SESSION["perfil"] == "Especial"){
                     
                     <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                    <input type="text" class="form-control" id="nuevoVendedor" value="<?php echo $_SESSION["nombre"]; ?>" readonly>
-
-                    <input type="hidden" name="idVendedor" value="<?php echo $_SESSION["id"]; ?>">
+                    <select class="form-control" id="nuevoVendedor" name="nuevoVendedor">
+                      <?php
+                        $usuarios = ControladorUsuarios::ctrMostrarUsuarios(null, null);
+                        foreach ($usuarios as $key => $value) {
+                          echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                        }
+                      ?>
+                    </select>
 
                   </div>
 
