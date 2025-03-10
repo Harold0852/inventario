@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 06, 2025 at 08:34 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.1.25
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 08-03-2025 a las 00:48:48
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `inventario_wsl`
+-- Base de datos: `inventario_wsl`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias`
+-- Estructura de tabla para la tabla `categorias`
 --
 
 CREATE TABLE `categorias` (
@@ -34,7 +34,7 @@ CREATE TABLE `categorias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `categorias`
+-- Volcado de datos para la tabla `categorias`
 --
 
 INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clientes`
+-- Estructura de tabla para la tabla `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -64,7 +64,7 @@ CREATE TABLE `clientes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos`
+-- Estructura de tabla para la tabla `productos`
 --
 
 CREATE TABLE `productos` (
@@ -81,7 +81,7 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `productos`
+-- Volcado de datos para la tabla `productos`
 --
 
 INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`, `stock`, `precio_compra`, `precio_venta`, `ventas`, `fecha`) VALUES
@@ -104,7 +104,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (17, 1, 'AR1385', 'Afeitadora Remington 1385', 'vistas/img/productos/default/anonymous.png', 4, 110000, 0, 0, '2025-03-06 13:30:20'),
 (18, 1, 'ABGR318', 'Afeitadora VGR 318', 'vistas/img/productos/default/anonymous.png', 2, 60000, 0, 0, '2025-03-06 13:30:20'),
 (19, 1, 'AVGRV331', 'Afeitadora VGR V331', 'vistas/img/productos/default/anonymous.png', 5, 30000, 0, 0, '2025-03-06 13:30:20'),
-(20, 1, 'AVGRV332', 'Afeitadora VGR V332', 'vistas/img/productos/default/anonymous.png', 2, 55000, 0, 0, '2025-03-06 13:30:20'),
+(20, 1, 'AVGRV332', 'Afeitadora VGR V332', 'vistas/img/productos/default/anonymous.png', 3, 55000, 0, 1, '2025-03-07 22:43:31'),
 (21, 1, 'AWM', 'Afeitadora Wahl Mini', 'vistas/img/productos/default/anonymous.png', 2, 100000, 0, 0, '2025-03-06 13:30:20'),
 (22, 1, 'AWF802IN', 'Antena Wi-Fi 802 IN', 'vistas/img/productos/default/anonymous.png', 3, 10000, 0, 0, '2025-03-06 13:30:20'),
 (23, 1, 'ADAM', 'Antenas de AM', 'vistas/img/productos/default/anonymous.png', 2, 5000, 0, 0, '2025-03-06 13:30:20'),
@@ -114,7 +114,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (27, 1, 'AA', 'Artic Air', 'vistas/img/productos/default/anonymous.png', 3, 20000, 0, 0, '2025-03-06 13:30:20'),
 (28, 1, 'APCARRO', 'Aspiradora para Carro', 'vistas/img/productos/default/anonymous.png', 4, 15000, 0, 0, '2025-03-06 13:30:20'),
 (29, 1, 'A450JBLR', 'Audífonos 450 JBL Réplica ', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
-(30, 1, 'AACPANCENC', 'Audífonos AirPods con Pantalla ANC ENC', 'vistas/img/productos/default/anonymous.png', 3, 40000, 0, 0, '2025-03-06 13:30:20'),
+(30, 1, 'AACPANCENC', 'Audífonos AirPods con Pantalla ANC ENC', 'vistas/img/productos/default/anonymous.png', 5, 40000, 0, 2, '2025-03-07 23:31:36'),
 (31, 1, 'AIPDI', 'Audífonos AirPods de Imán', 'vistas/img/productos/default/anonymous.png', 1, 70000, 0, 0, '2025-03-06 13:30:20'),
 (32, 1, 'AAP2DAG', 'Audífonos AirPods Pro 2da Generación', 'vistas/img/productos/default/anonymous.png', 3, 45000, 0, 0, '2025-03-06 13:30:20'),
 (33, 1, 'AAP200', 'Audífonos AP-200', 'vistas/img/productos/default/anonymous.png', 11, 25000, 0, 0, '2025-03-06 13:30:20'),
@@ -125,20 +125,20 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (38, 1, 'AB700', 'Audífonos Bose 700', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (39, 1, 'ABRT40', 'Audífonos Bose Réplica T40', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (40, 1, 'ABSAB', 'Audífonos Bose Sports Air Buds', 'vistas/img/productos/default/anonymous.png', 1, 500000, 0, 0, '2025-03-06 13:30:20'),
-(41, 1, 'ABBSE801', 'Audífonos Brightside BSE-801', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
+(41, 1, 'ABBSE801', 'Audífonos Brightside BSE-801', 'vistas/img/productos/default/anonymous.png', 0, 10000, 0, 1, '2025-03-07 22:02:37'),
 (42, 1, 'AB3L', 'Audífonos Buds 3 Lite', 'vistas/img/productos/default/anonymous.png', 11, 30000, 0, 0, '2025-03-06 13:30:20'),
 (43, 1, 'ACCHX2', 'Audífonos Coby CHX-2', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
 (44, 1, 'ACOK69', 'Audífonos Conducción Osio K-69', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (45, 1, 'ADCOS9', 'Audífonos de Conducción Osea S9', 'vistas/img/productos/default/anonymous.png', 6, 30000, 0, 0, '2025-03-06 13:30:20'),
 (46, 1, 'ADDASHP3500', 'Audífonos de Diadema AS HP3500', 'vistas/img/productos/default/anonymous.png', 3, 15000, 0, 0, '2025-03-06 13:30:20'),
-(47, 1, 'ADDSSE5222', 'Audífonos de Diadema Shuer SE-5222', 'vistas/img/productos/default/anonymous.png', 4, 10000, 0, 0, '2025-03-06 13:30:20'),
+(47, 1, 'ADDSSE5222', 'Audífonos de Diadema Shuer SE-5222', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 2, '2025-03-07 22:32:56'),
 (48, 1, 'ADN', 'Audífonos de Niño ', 'vistas/img/productos/default/anonymous.png', 11, 40000, 0, 0, '2025-03-06 13:30:20'),
 (49, 1, 'ADDS401', 'Audífonos Desaurt DS401', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
 (50, 1, 'ADAPM', 'Audífonos Diadema AirPods Max', 'vistas/img/productos/default/anonymous.png', 5, 50000, 0, 0, '2025-03-06 13:30:20'),
 (51, 1, 'ADBMDR950', 'Audífonos Diadema Bluetooth MDR-950', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (52, 1, 'ADQS63', 'Audífonos Diademas Q-S63', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (53, 1, 'AE6S', 'Audífonos E6S', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
-(54, 1, 'AF9', 'Audífonos F9', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
+(54, 1, 'AF9', 'Audífonos F9', 'vistas/img/productos/default/anonymous.png', 5, 20000, 0, 0, '2025-03-07 21:50:35'),
 (55, 1, 'AGC', 'Audífonos Gamer Camuflado', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
 (56, 1, 'AGIG20000P', 'Audífonos Gamer Inalámbrico G2000 Pro', 'vistas/img/productos/default/anonymous.png', 1, 100000, 0, 0, '2025-03-06 13:30:20'),
 (57, 1, 'AGKUMCK4', 'Audífonos Gamer KUMC K-4', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
@@ -149,21 +149,21 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (62, 1, 'AIWIMA16', 'Audífonos iWIN A16', 'vistas/img/productos/default/anonymous.png', 1, 5000, 0, 0, '2025-03-06 13:30:20'),
 (63, 1, 'AJBLRIP54', 'Audífonos JBL Réplica IP54', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
 (64, 1, 'AJBLT110', 'Audífonos JBL Tune 110', 'vistas/img/productos/default/anonymous.png', 7, 25000, 0, 0, '2025-03-06 13:30:20'),
-(65, 1, 'AJBLT520', 'Audífonos JBL Tune 520', 'vistas/img/productos/default/anonymous.png', 59, 145000, 0, 0, '2025-03-06 13:30:20'),
+(65, 1, 'AJBLT520', 'Audífonos JBL Tune 520', 'vistas/img/productos/default/anonymous.png', 4, 145000, 0, 55, '2025-03-07 22:30:16'),
 (66, 1, 'AJBLT500', 'Audífonos JBL Tunnes 500', 'vistas/img/productos/default/anonymous.png', 2, 90000, 0, 0, '2025-03-06 13:30:20'),
 (67, 1, 'AJBLT670', 'Audífonos JBL Tunnes 670', 'vistas/img/productos/default/anonymous.png', 1, 330000, 0, 0, '2025-03-06 13:30:20'),
 (68, 1, 'AJBLTF', 'Audífonos JBL Tunnes Flex', 'vistas/img/productos/default/anonymous.png', 3, 240000, 0, 0, '2025-03-06 13:30:20'),
 (69, 1, 'AJBLWB', 'Audífonos JBL Wave Buds', 'vistas/img/productos/default/anonymous.png', 1, 160000, 0, 0, '2025-03-06 13:30:20'),
 (70, 1, 'AJ', 'Audífonos Jedel ', 'vistas/img/productos/default/anonymous.png', 4, 10000, 0, 0, '2025-03-06 13:30:20'),
 (71, 1, 'AKR8000', 'Audífonos KR 8000', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
-(72, 1, 'ALHT38', 'Audífonos Lenovo HT38', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
-(73, 1, 'ALLP40', 'Audífonos Lenovo LP40', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
+(72, 1, 'ALHT38', 'Audífonos Lenovo HT38', 'vistas/img/productos/default/anonymous.png', 6, 50000, 0, 0, '2025-03-07 21:49:23'),
+(73, 1, 'ALLP40', 'Audífonos Lenovo LP40', 'vistas/img/productos/default/anonymous.png', 7, 30000, 0, 0, '2025-03-07 21:49:06'),
 (74, 1, 'ALGHBCFL7', 'Audífonos LG HBC FL7', 'vistas/img/productos/default/anonymous.png', 1, 180000, 0, 0, '2025-03-06 13:30:20'),
 (75, 1, 'ALGS740', 'Audífonos LG S740', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
-(76, 1, 'AM25', 'Audífonos M25', 'vistas/img/productos/default/anonymous.png', 7, 15000, 0, 0, '2025-03-06 13:30:20'),
+(76, 1, 'AM25', 'Audífonos M25', 'vistas/img/productos/default/anonymous.png', 19, 15000, 0, 1, '2025-03-07 23:41:29'),
 (77, 1, 'AM30', 'Audífonos M30', 'vistas/img/productos/default/anonymous.png', 7, 30000, 0, 0, '2025-03-06 13:30:20'),
 (78, 1, 'AMAB52', 'Audífonos MaxAl B52', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
-(79, 1, 'AMA', 'Audífonos Maxell Airlink', 'vistas/img/productos/default/anonymous.png', 2, 110000, 0, 0, '2025-03-06 13:30:20'),
+(79, 1, 'AMA', 'Audífonos Maxell Airlink', 'vistas/img/productos/default/anonymous.png', 2, 110000, 0, 1, '2025-03-07 23:27:32'),
 (80, 1, 'AMDT', 'Audífonos Maxell de Topo', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (81, 1, 'AMEB', 'Audífonos Maxell Ead Buds', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (82, 1, 'AMTWSCDR', 'Audífonos Maxell TWS635 Cancelación de Ruido', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
@@ -197,9 +197,9 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (110, 1, 'ASS8', 'Audífonos Samsung S8', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (111, 1, 'ASMDRS40', 'Audífonos Sonic MDR-S40', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (112, 1, 'AS35', 'Audífonos Sony 35', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
-(113, 1, 'AS450', 'Audífonos Sony 450', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
+(113, 1, 'AS450', 'Audífonos Sony 450', 'vistas/img/productos/default/anonymous.png', 7, 15000, 0, 0, '2025-03-07 21:35:41'),
 (114, 1, 'ASAQ81', 'Audífonos Sony AQ81', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
-(115, 1, 'ASC500', 'Audífonos Sony C500', 'vistas/img/productos/default/anonymous.png', 3, 150000, 0, 0, '2025-03-06 13:30:20'),
+(115, 1, 'ASC500', 'Audífonos Sony C500', 'vistas/img/productos/default/anonymous.png', 2, 150000, 0, 1, '2025-03-07 23:30:13'),
 (116, 1, 'ASC510', 'Audífonos Sony C510', 'vistas/img/productos/default/anonymous.png', 1, 130000, 0, 0, '2025-03-06 13:30:20'),
 (117, 1, 'ASDD', 'Audífonos Sony de Doblar ', 'vistas/img/productos/default/anonymous.png', 4, 5000, 0, 0, '2025-03-06 13:30:20'),
 (118, 1, 'ASDX750', 'Audífonos Sony DX-750', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
@@ -207,9 +207,9 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (120, 1, 'ASMDRX750', 'Audífonos Sony MDRX-750', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (121, 1, 'ASRK33', 'Audífonos Sony Réplica K33', 'vistas/img/productos/default/anonymous.png', 4, 25000, 0, 0, '2025-03-06 13:30:20'),
 (122, 1, 'ASS10N', 'Audífonos Sony S10 Nuevos', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
-(123, 1, 'ASWHCH520O', 'Audífonos Sony WHCH 520 Original', 'vistas/img/productos/default/anonymous.png', 5, 100000, 0, 0, '2025-03-06 13:30:20'),
+(123, 1, 'ASWHCH520O', 'Audífonos Sony WHCH 520 Original', 'vistas/img/productos/default/anonymous.png', 5, 100000, 0, 1, '2025-03-07 23:38:17'),
 (124, 1, 'ASWHCH520R', 'Audífonos Sony WHCH-520 Réplica ', 'vistas/img/productos/default/anonymous.png', 9, 25000, 0, 0, '2025-03-06 13:30:20'),
-(125, 1, 'ASXB400', 'Audífonos Sony XB400', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
+(125, 1, 'ASXB400', 'Audífonos Sony XB400', 'vistas/img/productos/default/anonymous.png', 0, 10000, 0, 1, '2025-03-07 22:12:58'),
 (126, 1, 'ASXB50X180', 'Audífonos Sony XB50 y X180', 'vistas/img/productos/default/anonymous.png', 3, 10000, 0, 0, '2025-03-06 13:30:20'),
 (127, 1, 'ASBS704', 'Audífonos Spartan BS-704', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (128, 1, 'ATIQ', 'Audífonos TIQ', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
@@ -219,22 +219,22 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (132, 1, 'AWIA450', 'Audífonos WIA 450', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (133, 1, 'AWITAG250', 'Audífonos WIT AG-250', 'vistas/img/productos/default/anonymous.png', 6, 20000, 0, 0, '2025-03-06 13:30:20'),
 (134, 1, 'AXAD3', 'Audífonos Xioami Air Dots 3', 'vistas/img/productos/default/anonymous.png', 20, 20000, 0, 0, '2025-03-06 13:30:20'),
-(135, 1, 'AXRB6L', 'Audífonos Xioami Redmi Buds 6 Lite', 'vistas/img/productos/default/anonymous.png', 1, 90000, 0, 0, '2025-03-06 13:30:20'),
+(135, 1, 'AXRB6L', 'Audífonos Xioami Redmi Buds 6 Lite', 'vistas/img/productos/default/anonymous.png', 0, 90000, 0, 1, '2025-03-07 23:47:35'),
 (136, 1, 'BD32G', 'Banda Deportiva 32G', 'vistas/img/productos/default/anonymous.png', 1, 80000, 0, 0, '2025-03-06 13:30:20'),
 (137, 1, 'BDGM4M5M6', 'Banda Deportiva Genérica M4 M5 M6', 'vistas/img/productos/default/anonymous.png', 6, 10000, 0, 0, '2025-03-06 13:30:20'),
 (138, 1, 'BHB4', 'Bandas Huawei Band 4', 'vistas/img/productos/default/anonymous.png', 1, 80000, 0, 0, '2025-03-06 13:30:20'),
 (139, 1, 'BW', 'Bandas Wearfit', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (140, 1, 'BXSBM5', 'Bandas Xioami Smart Banda M5', 'vistas/img/productos/default/anonymous.png', 7, 60000, 0, 0, '2025-03-06 13:30:20'),
 (141, 1, 'BDSE5011G', 'Barra de Sonido E5011 Genérico', 'vistas/img/productos/default/anonymous.png', 9, 120000, 0, 0, '2025-03-06 13:30:20'),
-(142, 1, 'BCM', 'Base de Computador Madera', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
+(142, 1, 'BCM', 'Base de Computador Madera', 'vistas/img/productos/default/anonymous.png', 0, 30000, 0, 3, '2025-03-07 22:37:07'),
 (143, 1, 'BEX4AAA', 'Batería Energizer X 4 AAA', 'vistas/img/productos/default/anonymous.png', 3, 15000, 0, 0, '2025-03-06 13:30:20'),
 (144, 1, 'BI1100MAHX4', 'Batería Ironbat 1100 mAh x 4', 'vistas/img/productos/default/anonymous.png', 9, 15000, 0, 0, '2025-03-06 13:30:20'),
 (145, 1, 'BIAA3600MAH', 'Batería Ironbat AA 3600 mAh ', 'vistas/img/productos/default/anonymous.png', 10, 10000, 0, 0, '2025-03-06 13:30:20'),
 (146, 1, 'BP105', 'Bateria Panasonic 105', 'vistas/img/productos/default/anonymous.png', 4, 10000, 0, 0, '2025-03-06 13:30:20'),
 (147, 1, 'BP305', 'Bateria Panasonic 305', 'vistas/img/productos/default/anonymous.png', 3, 5000, 0, 0, '2025-03-06 13:30:20'),
-(148, 1, 'BPI', 'Batería para Iphone', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
+(148, 1, 'BPI', 'Batería para Iphone', 'vistas/img/productos/default/anonymous.png', 0, 20000, 0, 1, '2025-03-07 23:17:38'),
 (149, 1, 'BPRB', 'Batería para Radio Baofeng', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
-(150, 1, 'BRSAA2700MAH', 'Batería Recargable Sony AA 2700 mAh ', 'vistas/img/productos/default/anonymous.png', 14, 10000, 0, 0, '2025-03-06 13:30:20'),
+(150, 1, 'BRSAA2700MAH', 'Batería Recargable Sony AA 2700 mAh ', 'vistas/img/productos/default/anonymous.png', 12, 10000, 0, 2, '2025-03-07 23:27:32'),
 (151, 1, 'BSAAA', 'Batería Sony AAA ', 'vistas/img/productos/default/anonymous.png', 12, 1000, 0, 0, '2025-03-06 13:30:20'),
 (152, 1, 'BMX4AA3000MAH', 'Baterías Maxuss x 4 AA 3000 mAh ', 'vistas/img/productos/default/anonymous.png', 2, 15000, 0, 0, '2025-03-06 13:30:20'),
 (153, 1, 'BVAA', 'Baterías Varta AA', 'vistas/img/productos/default/anonymous.png', 7, 2000, 0, 0, '2025-03-06 13:30:20'),
@@ -259,7 +259,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (172, 1, 'CHDMI', 'Cables HDMI', 'vistas/img/productos/default/anonymous.png', 7, 5000, 0, 0, '2025-03-06 13:30:20'),
 (173, 1, 'CHDM4K', 'Cables HDMI 4K', 'vistas/img/productos/default/anonymous.png', 3, 15000, 0, 0, '2025-03-06 13:30:20'),
 (174, 1, 'CJBL', 'Cables JBL', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
-(175, 1, 'CPCEL', 'Cables para Celular', 'vistas/img/productos/default/anonymous.png', 59, 5000, 0, 0, '2025-03-06 13:30:20'),
+(175, 1, 'CPCEL', 'Cables para Celular', 'vistas/img/productos/default/anonymous.png', 58, 5000, 0, 1, '2025-03-07 23:30:13'),
 (176, 1, 'CABLESPI', 'Cables para iPhone', 'vistas/img/productos/default/anonymous.png', 16, 10000, 0, 0, '2025-03-06 13:30:20'),
 (177, 1, 'CPII', 'Cables para Iphone Igoma', 'vistas/img/productos/default/anonymous.png', 4, 10000, 0, 0, '2025-03-06 13:30:20'),
 (178, 1, 'CBA10', 'Cámara Bombillo A10', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
@@ -269,7 +269,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (182, 1, 'CDERIP66', 'Cámara de Exteriores Robóticas IP66', 'vistas/img/productos/default/anonymous.png', 9, 60000, 0, 0, '2025-03-06 13:30:20'),
 (183, 1, 'CDRWF', 'Cámara de Reloj Wi-Fi', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (184, 1, 'CEE', 'Cámara Esfero Espía', 'vistas/img/productos/default/anonymous.png', 3, 50000, 0, 0, '2025-03-06 13:30:20'),
-(185, 1, 'CEB', 'Cámara Espía Botón', 'vistas/img/productos/default/anonymous.png', 4, 25000, 0, 0, '2025-03-06 13:30:20'),
+(185, 1, 'CEB', 'Cámara Espía Botón', 'vistas/img/productos/default/anonymous.png', 4, 25000, 0, 1, '2025-03-07 23:37:12'),
 (186, 1, 'CEDC', 'Cámara Espía de Cinta', 'vistas/img/productos/default/anonymous.png', 4, 80000, 0, 0, '2025-03-06 13:30:20'),
 (187, 1, 'CEDT', 'Cámara Espía de Tornillo', 'vistas/img/productos/default/anonymous.png', 2, 25000, 0, 0, '2025-03-06 13:30:20'),
 (188, 1, 'CEP', 'Cámara Espía Perchero', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
@@ -283,7 +283,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (196, 1, 'CPTZCPTCVDL', 'Cámara PTZ con Panel True Color View Doble Lente', 'vistas/img/productos/default/anonymous.png', 3, 180000, 0, 0, '2025-03-06 13:30:20'),
 (197, 1, 'CRWF', 'Cámara Redonda Wi-Fi', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (198, 1, 'CRPC1080P', 'Cámara Reversa para Carro 1080p', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
-(199, 1, 'CR3A', 'Cámara Robótica 3 Antenas', 'vistas/img/productos/default/anonymous.png', 12, 37000, 0, 0, '2025-03-06 13:30:20'),
+(199, 1, 'CR3A', 'Cámara Robótica 3 Antenas', 'vistas/img/productos/default/anonymous.png', 9, 37000, 0, 3, '2025-03-07 23:05:28'),
 (200, 1, 'CRMIPCV380LY09', 'Cámara Robótica Modelo IPC V380 LY09', 'vistas/img/productos/default/anonymous.png', 3, 90000, 0, 0, '2025-03-06 13:30:20'),
 (201, 1, 'CRWFT101', 'Cámara Robótica Wi-Fi T101', 'vistas/img/productos/default/anonymous.png', 3, 90000, 0, 0, '2025-03-06 13:30:20'),
 (202, 1, 'CSDP', 'Cámara Sports Doble Pantalla', 'vistas/img/productos/default/anonymous.png', 1, 120000, 0, 0, '2025-03-06 13:30:20'),
@@ -296,7 +296,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (209, 1, 'CWF1080PC', 'Cámara Wi-Fi 1080p Cuadrada', 'vistas/img/productos/default/anonymous.png', 2, 70000, 0, 0, '2025-03-06 13:30:20'),
 (210, 1, 'CWF5A', 'Cámara Wi-Fi 5 Antenas', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (211, 1, 'CWFM2', 'Cámara Wi-Fi Model 2', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 0, '2025-03-06 13:30:20'),
-(212, 1, 'CWFQ11', 'Cámara Wi-Fi Q11', 'vistas/img/productos/default/anonymous.png', 4, 40000, 0, 0, '2025-03-06 13:30:20'),
+(212, 1, 'CWFQ11', 'Cámara Wi-Fi Q11', 'vistas/img/productos/default/anonymous.png', 3, 40000, 0, 1, '2025-03-07 23:10:20'),
 (213, 1, 'CWFZ2', 'Cámara Wi-Fi Z2', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
 (214, 1, 'C3E1IWL7', 'Cargador 3 en 1 Igoma WL7', 'vistas/img/productos/default/anonymous.png', 7, 35000, 0, 0, '2025-03-06 13:30:20'),
 (215, 1, 'CDCR', 'Cargador de Carro Royer', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
@@ -307,8 +307,8 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (220, 1, 'CIT', 'Cargador Inalámbrico Tech', 'vistas/img/productos/default/anonymous.png', 2, 5000, 0, 0, '2025-03-06 13:30:20'),
 (221, 1, 'CPCRO', 'Cargador para Carro RI', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (222, 1, 'CSI', 'Cargador Samsung Inalámbrico', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
-(223, 1, 'CDPBYM1500MAH', 'Cargadores de Pila Beston y Maxuss 1500 mAh', 'vistas/img/productos/default/anonymous.png', 11, 25000, 0, 0, '2025-03-06 13:30:20'),
-(224, 1, 'CDPI13600MAH', 'Cargadores de Pila Ironbat 13600 mAh', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
+(223, 1, 'CDPBYM1500MAH', 'Cargadores de Pila Beston y Maxuss 1500 mAh', 'vistas/img/productos/default/anonymous.png', 10, 25000, 0, 1, '2025-03-07 23:03:10'),
+(224, 1, 'CDPI13600MAH', 'Cargadores de Pila Ironbat 3600 mAh', 'vistas/img/productos/default/anonymous.png', 0, 35000, 0, 2, '2025-03-07 23:24:42'),
 (225, 1, 'CPC', 'Cargadores para Celular', 'vistas/img/productos/default/anonymous.png', 18, 5000, 0, 0, '2025-03-06 13:30:20'),
 (226, 1, 'CARGADORESPI', 'Cargadores para Iphone', 'vistas/img/productos/default/anonymous.png', 11, 10000, 0, 0, '2025-03-06 13:30:20'),
 (227, 1, 'CPSW', 'Cargadores para Smart Watch', 'vistas/img/productos/default/anonymous.png', 3, 10000, 0, 0, '2025-03-06 13:30:20'),
@@ -318,8 +318,8 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (231, 1, 'CSG', 'Cepillo Secador Genérico ', 'vistas/img/productos/default/anonymous.png', 3, 30000, 0, 0, '2025-03-06 13:30:20'),
 (232, 1, 'CSRWET22', 'Cepillo Secador Remintong WET-2', 'vistas/img/productos/default/anonymous.png', 2, 160000, 0, 0, '2025-03-06 13:30:20'),
 (233, 1, 'CSRP', 'Cepillo Secador Revlon Plus', 'vistas/img/productos/default/anonymous.png', 2, 180000, 0, 0, '2025-03-06 13:30:20'),
-(234, 1, 'C4K', 'Chromecast 4K', 'vistas/img/productos/default/anonymous.png', 1, 260000, 0, 0, '2025-03-06 13:30:20'),
-(235, 1, 'CHD', 'Chromecast HD', 'vistas/img/productos/default/anonymous.png', 2, 220000, 0, 0, '2025-03-06 13:30:20'),
+(234, 1, 'C4K', 'Chromecast 4K', 'vistas/img/productos/default/anonymous.png', 1, 260000, 0, 1, '2025-03-07 23:47:35'),
+(235, 1, 'CHD', 'Chromecast HD', 'vistas/img/productos/default/anonymous.png', 0, 220000, 0, 2, '2025-03-07 22:43:58'),
 (236, 1, 'CK13RAYJ', 'Combo K13 Reloj, Audífonos y Juego', 'vistas/img/productos/default/anonymous.png', 1, 90000, 0, 0, '2025-03-06 13:30:20'),
 (237, 1, 'CMX300', 'Compresores Mini X300', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (238, 1, 'CG', 'Control Gatillo', 'vistas/img/productos/default/anonymous.png', 1, 5000, 0, 0, '2025-03-06 13:30:20'),
@@ -331,33 +331,33 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (244, 1, 'CPCC7', 'Convertidor para Carro Cars7', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
 (245, 1, 'CPCFT110', 'Convertidor para Carro Fly T110', 'vistas/img/productos/default/anonymous.png', 7, 10000, 0, 0, '2025-03-06 13:30:20'),
 (246, 1, 'CSOG', 'Convertidor Smart Onn Genérico', 'vistas/img/productos/default/anonymous.png', 1, 90000, 0, 0, '2025-03-06 13:30:20'),
-(247, 1, 'CSS4K', 'Convertidor Smart Skyworth 4K', 'vistas/img/productos/default/anonymous.png', 10, 75000, 0, 0, '2025-03-06 13:30:20'),
-(248, 1, 'CTVSF8K', 'Convertidor TV Stick Fly 8K', 'vistas/img/productos/default/anonymous.png', 6, 80000, 0, 0, '2025-03-06 13:30:20'),
+(247, 1, 'CSS4K', 'Convertidor Smart Skyworth 4K', 'vistas/img/productos/default/anonymous.png', 0, 75000, 0, 14, '2025-03-07 23:41:29'),
+(248, 1, 'CTVSF8K', 'Convertidor TV Stick Fly 8K', 'vistas/img/productos/default/anonymous.png', 5, 80000, 0, 1, '2025-03-07 23:41:29'),
 (249, 1, 'CHDMIVGAYRSA', 'Convertidores HDMI VGA y RSA', 'vistas/img/productos/default/anonymous.png', 4, 15000, 0, 0, '2025-03-06 13:30:20'),
 (250, 1, 'CHE', 'Cripestera Home Elements', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (251, 1, 'DDCBPBG5025', 'Depilador de Cuerpo Bodygroom Philips BG5025', 'vistas/img/productos/default/anonymous.png', 5, 90000, 0, 0, '2025-03-06 13:30:20'),
 (252, 1, 'DSFJ0030', 'Diksman Sony FJ0030', 'vistas/img/productos/default/anonymous.png', 8, 40000, 0, 0, '2025-03-06 13:30:20'),
 (253, 1, 'DDS4TB', 'Disco Duro Seagate 4TB', 'vistas/img/productos/default/anonymous.png', 1, 300000, 0, 0, '2025-03-06 13:30:20'),
-(254, 1, 'DDT1TB', 'Disco Duro Toshiba 1TB', 'vistas/img/productos/default/anonymous.png', 3, 210000, 0, 0, '2025-03-06 13:30:20'),
+(254, 1, 'DDT1TB', 'Disco Duro Toshiba 1TB', 'vistas/img/productos/default/anonymous.png', 2, 210000, 0, 1, '2025-03-07 22:37:24'),
 (255, 1, 'DISBANK', 'Diskbank', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (256, 1, 'DH', 'Dron Hendee', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (257, 1, 'DXT8', 'Drones XT8', 'vistas/img/productos/default/anonymous.png', 2, 60000, 0, 0, '2025-03-06 13:30:20'),
-(258, 1, 'DVD168', 'DVD 168', 'vistas/img/productos/default/anonymous.png', 3, 60000, 0, 0, '2025-03-06 13:30:20'),
+(258, 1, 'DVD168', 'DVD 168', 'vistas/img/productos/default/anonymous.png', 2, 60000, 0, 1, '2025-03-07 23:21:26'),
 (259, 1, 'DVDPU', 'DVD Portátil Usado', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
 (260, 1, 'EBPA', 'Estuche Bose para Audífonos', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
-(261, 1, 'EPPJBL', 'Estuche para Parlante JBL', 'vistas/img/productos/default/anonymous.png', 3, 35000, 0, 0, '2025-03-06 13:30:20'),
+(261, 1, 'EPPJBL', 'Estuche para Parlante JBL', 'vistas/img/productos/default/anonymous.png', 5, 35000, 0, 0, '2025-03-07 21:51:51'),
 (262, 1, 'EDA', 'Estuches de AirPods', 'vistas/img/productos/default/anonymous.png', 2, 5000, 0, 0, '2025-03-06 13:30:20'),
-(263, 1, 'EDCC', 'Estuches de Control Chromecast', 'vistas/img/productos/default/anonymous.png', 3, 10000, 0, 0, '2025-03-06 13:30:20'),
+(263, 1, 'EDCC', 'Estuches de Control Chromecast', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 1, '2025-03-07 23:47:35'),
 (264, 1, 'FDA', 'Filtro de Agua', 'vistas/img/productos/default/anonymous.png', 1, 5000, 0, 0, '2025-03-06 13:30:20'),
 (265, 1, 'FSL', 'Fire Stick Lite', 'vistas/img/productos/default/anonymous.png', 1, 115000, 0, 0, '2025-03-06 13:30:20'),
 (266, 1, 'FSR10K', 'Fire Stick Réplica 10K', 'vistas/img/productos/default/anonymous.png', 1, 90000, 0, 0, '2025-03-06 13:30:20'),
-(267, 1, 'FTVS4K', 'Fire TV Stick 4K', 'vistas/img/productos/default/anonymous.png', 3, 140000, 0, 0, '2025-03-06 13:30:20'),
-(268, 1, 'FTVSHD', 'FIRE TV Stick HD', 'vistas/img/productos/default/anonymous.png', 7, 120000, 0, 0, '2025-03-06 13:30:20'),
+(267, 1, 'FTVS4K', 'Fire TV Stick 4K', 'vistas/img/productos/default/anonymous.png', 4, 140000, 0, 3, '2025-03-07 23:41:29'),
+(268, 1, 'FTVSHD', 'FIRE TV Stick HD', 'vistas/img/productos/default/anonymous.png', 6, 120000, 0, 2, '2025-03-07 23:24:42'),
 (269, 1, 'FD16GB', 'FlashDrive 16Gb', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (270, 1, 'FDC', 'Flawer de Cejas ', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
 (271, 1, 'GDRVVR2', 'Gafas de Realidad Virtual VR 2', 'vistas/img/productos/default/anonymous.png', 5, 20000, 0, 0, '2025-03-06 13:30:20'),
 (272, 1, 'GSL', 'Game Stick Live ', 'vistas/img/productos/default/anonymous.png', 13, 45000, 0, 0, '2025-03-06 13:30:20'),
-(273, 1, 'GTVS8K', 'Game TV Stick 8k', 'vistas/img/productos/default/anonymous.png', 4, 110000, 0, 0, '2025-03-06 13:30:20'),
+(273, 1, 'GTVS8K', 'Game TV Stick 8k', 'vistas/img/productos/default/anonymous.png', 4, 110000, 0, 3, '2025-03-07 23:47:59'),
 (274, 1, 'GPX19', 'Gameplayer Plus X 19', 'vistas/img/productos/default/anonymous.png', 2, 110000, 0, 0, '2025-03-06 13:30:20'),
 (275, 1, 'GG30A', 'Glucómetro G30A', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 0, '2025-03-06 13:30:20'),
 (276, 1, 'GPSGNPC', 'GPS Garmin Nubi para Carro', 'vistas/img/productos/default/anonymous.png', 1, 100000, 0, 0, '2025-03-06 13:30:20'),
@@ -367,17 +367,17 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (280, 1, 'GPDMCU', 'Grabadora Periodista de Micro Caset Usada', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (281, 1, 'GSPX40', 'Grabadora Sony PX40', 'vistas/img/productos/default/anonymous.png', 1, 160000, 0, 0, '2025-03-06 13:30:20'),
 (282, 1, 'GTPPCCU', 'Grabadora Tipo Perdiosta Philips con Cámara Usadas', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
-(283, 1, 'GTPDD8GB', 'Grabadora Tipo Periodista Digital de 8GB', 'vistas/img/productos/default/anonymous.png', 4, 80000, 0, 0, '2025-03-06 13:30:20'),
+(283, 1, 'GTPDD8GB', 'Grabadora Tipo Periodista Digital de 8GB', 'vistas/img/productos/default/anonymous.png', 3, 80000, 0, 1, '2025-03-07 22:42:40'),
 (284, 1, 'GTPP620U', 'Grabadora Tipo Periodista P620 Usadas', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (285, 1, 'GTPSPX440', 'Grabadora Tipo Periodista Sony PX440', 'vistas/img/productos/default/anonymous.png', 1, 200000, 0, 0, '2025-03-06 13:30:20'),
-(286, 1, 'GTPSU440', 'Grabadora Tipo Periodista Sony Usadas 440', 'vistas/img/productos/default/anonymous.png', 31, 35000, 0, 0, '2025-03-06 13:30:20'),
+(286, 1, 'GTPSU440', 'Grabadora Tipo Periodista Sony Usadas 440', 'vistas/img/productos/default/anonymous.png', 29, 35000, 0, 2, '2025-03-07 23:34:13'),
 (287, 1, 'GTPZH1M', 'Grabadora Tipo Periodista Zoom H1M', 'vistas/img/productos/default/anonymous.png', 1, 200000, 0, 0, '2025-03-06 13:30:20'),
 (288, 1, 'GZH1U', 'Grabadora Zoom H1 Usada', 'vistas/img/productos/default/anonymous.png', 1, 130000, 0, 0, '2025-03-06 13:30:20'),
 (289, 1, 'GTPPU', 'Grabadoras Tipo Periodista Panasonic Usadas', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (290, 1, 'GE', 'Gramera Electronic', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
-(291, 1, 'IAX1', 'Interruptores Alexa X1', 'vistas/img/productos/default/anonymous.png', 14, 45000, 0, 0, '2025-03-06 13:30:20'),
-(292, 1, 'IAX2', 'Interruptores Alexa X2', 'vistas/img/productos/default/anonymous.png', 9, 45000, 0, 0, '2025-03-06 13:30:20'),
-(293, 1, 'IAX3', 'Interruptores Alexa X3', 'vistas/img/productos/default/anonymous.png', 10, 50000, 0, 0, '2025-03-06 13:30:20'),
+(291, 1, 'IAX1', 'Interruptores Alexa X1', 'vistas/img/productos/default/anonymous.png', 8, 45000, 0, 6, '2025-03-07 23:43:11'),
+(292, 1, 'IAX2', 'Interruptores Alexa X2', 'vistas/img/productos/default/anonymous.png', 8, 45000, 0, 1, '2025-03-07 23:43:11'),
+(293, 1, 'IAX3', 'Interruptores Alexa X3', 'vistas/img/productos/default/anonymous.png', 3, 50000, 0, 7, '2025-03-07 23:36:03'),
 (294, 1, 'JJQ603PM', 'Juqu JQ603 para Moto ', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (295, 1, 'LDCJAG', 'Lamparas de Camping JAG', 'vistas/img/productos/default/anonymous.png', 3, 10000, 0, 0, '2025-03-06 13:30:20'),
 (296, 1, 'LPT', 'Lápiz para Tablet', 'vistas/img/productos/default/anonymous.png', 27, 2000, 0, 0, '2025-03-06 13:30:20'),
@@ -394,12 +394,12 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (307, 1, 'LLRGB', 'Luces LED RGB', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (308, 1, 'LPC', 'Lupa para Celular', 'vistas/img/productos/default/anonymous.png', 13, 3000, 0, 0, '2025-03-06 13:30:20'),
 (309, 1, 'MPG', 'Mancetas para Glucometro', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
-(310, 1, 'MLPC1', 'Manos Libres para C1', 'vistas/img/productos/default/anonymous.png', 31, 5000, 0, 0, '2025-03-06 13:30:20'),
+(310, 1, 'MLPC1', 'Manos Libres para C1', 'vistas/img/productos/default/anonymous.png', 28, 5000, 0, 3, '2025-03-07 23:43:11'),
 (311, 1, 'M619U', 'Megáfono 619U', 'vistas/img/productos/default/anonymous.png', 2, 30000, 0, 0, '2025-03-06 13:30:20'),
-(312, 1, 'ME32GB', 'Memoria Escandaloso 32Gb', 'vistas/img/productos/default/anonymous.png', 4, 20000, 0, 0, '2025-03-06 13:30:20'),
+(312, 1, 'ME32GB', 'Memoria Escandaloso 32Gb', 'vistas/img/productos/default/anonymous.png', 3, 20000, 0, 1, '2025-03-07 23:43:11'),
 (313, 1, 'MMSDH128GB', 'Memoria Micro SD Harvic 128Gb ', 'vistas/img/productos/default/anonymous.png', 46, 25000, 0, 0, '2025-03-06 13:30:20'),
-(314, 1, 'MMSDH16GB', 'Memoria Micro SD Harvic 16Gb ', 'vistas/img/productos/default/anonymous.png', 31, 10000, 0, 0, '2025-03-06 13:30:20'),
-(315, 1, 'MMSDH32GB', 'Memoria Micro SD Harvic 32Gb ', 'vistas/img/productos/default/anonymous.png', 46, 13000, 0, 0, '2025-03-06 13:30:20'),
+(314, 1, 'MMSDH16GB', 'Memoria Micro SD Harvic 16Gb ', 'vistas/img/productos/default/anonymous.png', 25, 10000, 0, 6, '2025-03-07 23:47:34'),
+(315, 1, 'MMSDH32GB', 'Memoria Micro SD Harvic 32Gb ', 'vistas/img/productos/default/anonymous.png', 45, 13000, 0, 1, '2025-03-07 23:47:34'),
 (316, 1, 'MMSDH64GB', 'Memoria Micro SD Harvic 64Gb ', 'vistas/img/productos/default/anonymous.png', 92, 18000, 0, 0, '2025-03-06 13:30:20'),
 (317, 1, 'MMSDK128GB', 'Memoria Micro SD Kingston 128 GB', 'vistas/img/productos/default/anonymous.png', 3, 35000, 0, 0, '2025-03-06 13:30:20'),
 (318, 1, 'MMSDK16GB', 'Memoria Micro SD Kingston 16Gb', 'vistas/img/productos/default/anonymous.png', 16, 14000, 0, 0, '2025-03-06 13:30:20'),
@@ -413,7 +413,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (326, 1, 'MUSB256GBPC', 'Memoria USB 256GB para Celular', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 0, '2025-03-06 13:30:20'),
 (327, 1, 'MUSBH32GB', 'Memoria USB Harvic 32Gb', 'vistas/img/productos/default/anonymous.png', 49, 13000, 0, 0, '2025-03-06 13:30:20'),
 (328, 1, 'MUSBH64GB', 'Memoria USB Harvic 64Gb', 'vistas/img/productos/default/anonymous.png', 49, 17000, 0, 0, '2025-03-06 13:30:20'),
-(329, 1, 'MUSBK123GB', 'Memoria USB Kingston 123Gb', 'vistas/img/productos/default/anonymous.png', 2, 25000, 0, 0, '2025-03-06 13:30:20'),
+(329, 1, 'MUSBK123GB', 'Memoria USB Kingston 128Gb', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 1, '2025-03-07 23:48:19'),
 (330, 1, 'MUSBK256GB', 'Memoria USB Kingston 256Gb', 'vistas/img/productos/default/anonymous.png', 1, 70000, 0, 0, '2025-03-06 13:30:20'),
 (331, 1, 'MUSBK32GB', 'Memoria USB Kingston 32Gb', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (332, 1, 'MUSBK64GB', 'Memoria USB Kingston 64Gb', 'vistas/img/productos/default/anonymous.png', 37, 18000, 0, 0, '2025-03-06 13:30:20'),
@@ -429,7 +429,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (342, 1, 'MIWVNGRWG100', 'Micrófono Inalámbrico WVNGR WG100', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (343, 1, 'MLY100PN', 'Micrófono LY100 Para Niños', 'vistas/img/productos/default/anonymous.png', 25, 20000, 0, 0, '2025-03-06 13:30:20'),
 (344, 1, 'MNIAAN706', 'Micrófono NIA AN706', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
-(345, 1, 'MNLMA300', 'Micrófono NK MA-300', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
+(345, 1, 'MNLMA300', 'Micrófono NK MA-300', 'vistas/img/productos/default/anonymous.png', 0, 10000, 0, 2, '2025-03-07 23:44:44'),
 (346, 1, 'MNKMA353', 'Micrófono NK MA-353', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (347, 1, 'MPDNWS858', 'Micrófono Parlante de Niño WS858', 'vistas/img/productos/default/anonymous.png', 6, 20000, 0, 0, '2025-03-06 13:30:20'),
 (348, 1, 'MPZX818', 'Micrófono Parlante ZX-818', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
@@ -439,18 +439,18 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (352, 1, 'MWVNGRWG196', 'Micrófono WVNGR WG196', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (353, 1, 'MITTDM09', 'Micrófonos Inalámbrico TTD M09', 'vistas/img/productos/default/anonymous.png', 8, 45000, 0, 0, '2025-03-06 13:30:20'),
 (354, 1, 'MPCK35', 'Micrófonos para Celular K35', 'vistas/img/productos/default/anonymous.png', 5, 25000, 0, 0, '2025-03-06 13:30:20'),
-(355, 1, 'MPCK8', 'Micrófonos para Celular K8', 'vistas/img/productos/default/anonymous.png', 4, 20000, 0, 0, '2025-03-06 13:30:20'),
-(356, 1, 'MPCK9', 'Micrófonos para Celular K9', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
+(355, 1, 'MPCK8', 'Micrófonos para Celular K8', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 2, '2025-03-07 23:44:44'),
+(356, 1, 'MPCK9', 'Micrófonos para Celular K9', 'vistas/img/productos/default/anonymous.png', 3, 35000, 0, 0, '2025-03-07 21:36:23'),
 (357, 1, 'MADL', 'Mini Aro de Luz', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
-(358, 1, 'MSPBWS887', 'Mini Speaker Parlante Bluetooth WS-887', 'vistas/img/productos/default/anonymous.png', 69, 10000, 0, 0, '2025-03-06 13:30:20'),
+(358, 1, 'MSPBWS887', 'Mini Speaker Parlante Bluetooth WS-887', 'vistas/img/productos/default/anonymous.png', 68, 10000, 0, 1, '2025-03-07 23:21:26'),
 (359, 1, 'MPCCB2', 'Modulador para Carro CarB2', 'vistas/img/productos/default/anonymous.png', 3, 10000, 0, 0, '2025-03-06 13:30:20'),
-(360, 1, 'MDCNM8300', 'Molino de Café NM-8300', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
+(360, 1, 'MDCNM8300', 'Molino de Café NM-8300', 'vistas/img/productos/default/anonymous.png', 0, 15000, 0, 1, '2025-03-07 23:30:13'),
 (361, 1, 'MONOPOP', 'Monopop', 'vistas/img/productos/default/anonymous.png', 20, 3000, 0, 0, '2025-03-06 13:30:20'),
-(362, 1, 'MEA', 'Mouse Ergonómico Alámbrico', 'vistas/img/productos/default/anonymous.png', 7, 15000, 0, 0, '2025-03-06 13:30:20'),
+(362, 1, 'MEA', 'Mouse Ergonómico Alámbrico', 'vistas/img/productos/default/anonymous.png', 6, 15000, 0, 1, '2025-03-07 23:16:05'),
 (363, 1, 'MEI005566', 'Mouse Ergonómico Inalámbrico 005566', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (364, 1, 'MEYGMG4', 'Mouse Ergonómico y Goma MG-4', 'vistas/img/productos/default/anonymous.png', 6, 20000, 0, 0, '2025-03-06 13:30:20'),
 (365, 1, 'MGIMICEX5', 'Mouse Gamer iMice X-5', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
-(366, 1, 'MGI', 'Mouse Gamer Inalámbrico', 'vistas/img/productos/default/anonymous.png', 6, 20000, 0, 0, '2025-03-06 13:30:20'),
+(366, 1, 'MGI', 'Mouse Gamer Inalámbrico', 'vistas/img/productos/default/anonymous.png', 5, 20000, 0, 1, '2025-03-07 22:31:44'),
 (367, 1, 'MGMO20', 'Mouse Gamer MO20', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (368, 1, 'MGX3', 'Mouse Gamer X-3', 'vistas/img/productos/default/anonymous.png', 5, 15000, 0, 0, '2025-03-06 13:30:20'),
 (369, 1, 'MGX7', 'Mouse Gamer X-7', 'vistas/img/productos/default/anonymous.png', 4, 15000, 0, 0, '2025-03-06 13:30:20'),
@@ -459,7 +459,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (372, 1, 'MM201', 'Mouse M201', 'vistas/img/productos/default/anonymous.png', 2, 5000, 0, 0, '2025-03-06 13:30:20'),
 (373, 1, 'MSDNN601', 'Mouse Seisa DN-N601', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (374, 1, 'MWRF6800', 'Mouse Weibo RF6800', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
-(375, 1, 'MP3', 'MP3', 'vistas/img/productos/default/anonymous.png', 2, 5000, 0, 0, '2025-03-06 13:30:20'),
+(375, 1, 'MP3', 'MP3', 'vistas/img/productos/default/anonymous.png', 1, 5000, 0, 0, '2025-03-07 21:46:33'),
 (376, 1, 'MP5', 'MP5', 'vistas/img/productos/default/anonymous.png', 2, 90000, 0, 0, '2025-03-06 13:30:20'),
 (377, 1, 'MP57PX7P', 'MP5 7 Pulgadas X7 Plus', 'vistas/img/productos/default/anonymous.png', 1, 140000, 0, 0, '2025-03-06 13:30:20'),
 (378, 1, 'MP5HDMI', 'MP5 HDMI', 'vistas/img/productos/default/anonymous.png', 2, 90000, 0, 0, '2025-03-06 13:30:20'),
@@ -467,40 +467,39 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (380, 1, 'MP5X7', 'MP5 X7', 'vistas/img/productos/default/anonymous.png', 2, 70000, 0, 0, '2025-03-06 13:30:20'),
 (381, 1, 'ORC114AF', 'Ondulador Remington C114AF', 'vistas/img/productos/default/anonymous.png', 1, 170000, 0, 0, '2025-03-06 13:30:20');
 INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`, `stock`, `precio_compra`, `precio_venta`, `ventas`, `fecha`) VALUES
-(382, 1, 'ONNR4K', 'Onn Réplica 4K', 'vistas/img/productos/default/anonymous.png', 5, 90000, 0, 0, '2025-03-06 13:30:20'),
-(383, 1, 'OW4K', 'Onn Watch 4K', 'vistas/img/productos/default/anonymous.png', 14, 120000, 0, 0, '2025-03-06 13:30:20'),
-(384, 1, 'OWHD', 'Onn Watch HD', 'vistas/img/productos/default/anonymous.png', 24, 95000, 0, 0, '2025-03-06 13:30:20'),
+(382, 1, 'ONNR4K', 'Onn Réplica 4K', 'vistas/img/productos/default/anonymous.png', 4, 90000, 0, 1, '2025-03-07 23:39:56'),
+(383, 1, 'OW4K', 'Onn Watch 4K', 'vistas/img/productos/default/anonymous.png', 13, 120000, 0, 5, '2025-03-07 23:41:29'),
+(384, 1, 'OWHD', 'Onn Watch HD', 'vistas/img/productos/default/anonymous.png', 19, 95000, 0, 17, '2025-03-07 23:41:29'),
 (385, 1, 'OXIMETRO', 'Oximetro', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
 (386, 1, 'PS', 'Paneles Solares', 'vistas/img/productos/default/anonymous.png', 3, 25000, 0, 0, '2025-03-06 13:30:20'),
 (387, 1, 'P113', 'Parlante 113', 'vistas/img/productos/default/anonymous.png', 8, 25000, 0, 0, '2025-03-06 13:30:20'),
 (388, 1, 'PAED4TAG', 'Parlante Alexa Echo Dot 4ta Generación', 'vistas/img/productos/default/anonymous.png', 1, 140000, 0, 0, '2025-03-06 13:30:20'),
-(389, 1, 'PAED5TAG', 'Parlante Alexa Echo Dot 5ta Generación', 'vistas/img/productos/default/anonymous.png', 12, 170000, 0, 0, '2025-03-06 13:30:20'),
+(389, 1, 'PAED5TAG', 'Parlante Alexa Echo Dot 5ta Generación', 'vistas/img/productos/default/anonymous.png', 13, 170000, 0, 2, '2025-03-07 22:42:19'),
 (390, 1, 'PAEP', 'Parlante Alexa Echo Pop', 'vistas/img/productos/default/anonymous.png', 19, 120000, 0, 0, '2025-03-06 13:30:20'),
-(391, 1, 'PAEPI', 'Parlante Alexa Echo Pop Infantil', 'vistas/img/productos/default/anonymous.png', 3, 160000, 0, 0, '2025-03-06 13:30:20'),
+(391, 1, 'PAEPI', 'Parlante Alexa Echo Pop kid', 'vistas/img/productos/default/anonymous.png', 3, 160000, 0, 0, '2025-03-07 23:13:53'),
 (392, 1, 'PAES10P', 'Parlante Alexa Echo Show 10 Pulgadas', 'vistas/img/productos/default/anonymous.png', 2, 1200000, 0, 0, '2025-03-06 13:30:20'),
-(393, 1, 'PAES5P', 'Parlante Alexa Echo Show 5 Pulgadas', 'vistas/img/productos/default/anonymous.png', 5, 175000, 0, 0, '2025-03-06 13:30:20'),
-(394, 1, 'PAES5TAG', 'Parlante Alexa Echo Show 5ta Generación', 'vistas/img/productos/default/anonymous.png', 2, 275000, 0, 0, '2025-03-06 13:30:20'),
-(395, 1, 'PAES', 'Parlante Alexa Echo Spot', 'vistas/img/productos/default/anonymous.png', 6, 260000, 0, 0, '2025-03-06 13:30:20'),
+(393, 1, 'PAES5P', 'Parlante Alexa Echo Show 5 Pulgadas', 'vistas/img/productos/default/anonymous.png', 8, 275000, 0, 2, '2025-03-07 23:34:13'),
+(395, 1, 'PAES', 'Parlante Alexa Echo Spot', 'vistas/img/productos/default/anonymous.png', 5, 260000, 0, 1, '2025-03-07 22:55:19'),
 (396, 1, 'PAXESSSPVL1043', 'Parlante AXESS SPVL1043', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (397, 1, 'PB28', 'Parlante B28', 'vistas/img/productos/default/anonymous.png', 6, 35000, 0, 0, '2025-03-06 13:30:20'),
 (398, 1, 'PBBJBL3', 'Parlante BoomBox JBL 3', 'vistas/img/productos/default/anonymous.png', 4, 1700000, 0, 0, '2025-03-06 13:30:20'),
 (399, 1, 'PBBR', 'Parlante BoomBox Réplica', 'vistas/img/productos/default/anonymous.png', 23, 45000, 0, 0, '2025-03-06 13:30:20'),
 (400, 1, 'PCKPKTS18958P', 'Parlante Cabina K Proat KTS1895 8 pulgadas', 'vistas/img/productos/default/anonymous.png', 9, 90000, 0, 0, '2025-03-06 13:30:20'),
 (401, 1, 'PC4M', 'Parlante Charge 4 Mini', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
-(402, 1, 'PC4R', 'Parlante Charge 4 Réplica', 'vistas/img/productos/default/anonymous.png', 42, 25000, 0, 0, '2025-03-06 13:30:20'),
+(402, 1, 'PC4R', 'Parlante Charge 4 Réplica', 'vistas/img/productos/default/anonymous.png', 22, 25000, 0, 20, '2025-03-07 23:31:36'),
 (403, 1, 'PCCSMP48', 'Parlante Coby CSMP-48', 'vistas/img/productos/default/anonymous.png', 3, 5000, 0, 0, '2025-03-06 13:30:20'),
 (404, 1, 'PCMBTS385', 'Parlante con Micrófonos BTS 385 ', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (405, 1, 'PDBQ330', 'Parlante de Balón Q330', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (406, 1, 'PDD', 'Parlante de Ducha', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
 (407, 1, 'PE15', 'Parlante E15', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (408, 1, 'PE18+', 'Parlante E18+', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
-(409, 1, 'PEDK', 'Parlante Echo Dot Kids', 'vistas/img/productos/default/anonymous.png', 3, 180000, 0, 0, '2025-03-06 13:30:20'),
+(409, 1, 'PEDK', 'Parlante Echo Dot Kids', 'vistas/img/productos/default/anonymous.png', 0, 180000, 0, 1, '2025-03-07 23:12:57'),
 (410, 1, 'PES8P', 'Parlante Echo Show 8 Pulgadas', 'vistas/img/productos/default/anonymous.png', 4, 480000, 0, 0, '2025-03-06 13:30:20'),
 (411, 1, 'PE', 'Parlante Emoji', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (412, 1, 'PG13', 'Parlante G-13', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (413, 1, 'PG3', 'Parlante G3', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (414, 1, 'PG3PRCA', 'Parlante Go 3 Plus Réplica con Audífonos', 'vistas/img/productos/default/anonymous.png', 8, 35000, 0, 0, '2025-03-06 13:30:20'),
-(415, 1, 'PGNM', 'Parlante Google Next Mini', 'vistas/img/productos/default/anonymous.png', 3, 150000, 0, 0, '2025-03-06 13:30:20'),
+(415, 1, 'PGNM', 'Parlante Google Next Mini', 'vistas/img/productos/default/anonymous.png', 2, 150000, 0, 1, '2025-03-07 23:36:03'),
 (416, 1, 'PG1345', 'Parlante Greatnice 1345', 'vistas/img/productos/default/anonymous.png', 3, 15000, 0, 0, '2025-03-06 13:30:20'),
 (417, 1, 'PG1731', 'Parlante Greatnice 1731', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (418, 1, 'PGTS1836', 'Parlante GTS-1836', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
@@ -511,11 +510,11 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (423, 1, 'PHCM51', 'Parlante Huawei CM-51', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (424, 1, 'PIRL306', 'Parlante Ice RL-306', 'vistas/img/productos/default/anonymous.png', 1, 60000, 0, 0, '2025-03-06 13:30:20'),
 (425, 1, 'PJ', 'Parlante Jawbone ', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
-(426, 1, 'PJBLC5', 'Parlante JBL Charge 5', 'vistas/img/productos/default/anonymous.png', 6, 520000, 0, 0, '2025-03-06 13:30:20'),
+(426, 1, 'PJBLC5', 'Parlante JBL Charge 5', 'vistas/img/productos/default/anonymous.png', 4, 520000, 0, 2, '2025-03-07 23:14:40'),
 (427, 1, 'PJBLCLIP5', 'Parlante JBL Clip 5', 'vistas/img/productos/default/anonymous.png', 12, 220000, 0, 0, '2025-03-06 13:30:20'),
 (428, 1, 'PJBLEP', 'Parlante JBL Echo Pop', 'vistas/img/productos/default/anonymous.png', 4, 120000, 0, 0, '2025-03-06 13:30:20'),
-(429, 1, 'PJBLF6', 'Parlante JBL Flip 6', 'vistas/img/productos/default/anonymous.png', 6, 360000, 0, 0, '2025-03-06 13:30:20'),
-(430, 1, 'PJBLG2', 'Parlante JBL Go 2', 'vistas/img/productos/default/anonymous.png', 10, 60000, 0, 0, '2025-03-06 13:30:20'),
+(429, 1, 'PJBLF6', 'Parlante JBL Flip 6', 'vistas/img/productos/default/anonymous.png', 5, 360000, 0, 1, '2025-03-07 23:30:13'),
+(430, 1, 'PJBLG2', 'Parlante JBL Go 2', 'vistas/img/productos/default/anonymous.png', 9, 60000, 0, 1, '2025-03-07 22:54:15'),
 (431, 1, 'PJBLG4', 'Parlante JBL Go 4', 'vistas/img/productos/default/anonymous.png', 6, 150000, 0, 0, '2025-03-06 13:30:20'),
 (432, 1, 'PJBLS4', 'Parlante JBL Stream 4', 'vistas/img/productos/default/anonymous.png', 4, 1030000, 0, 0, '2025-03-06 13:30:20'),
 (433, 1, 'PKKBSK8', 'Parlante Kalley KBSK8', 'vistas/img/productos/default/anonymous.png', 6, 90000, 0, 0, '2025-03-06 13:30:20'),
@@ -534,7 +533,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (446, 1, 'PLBTS15', 'Parlante Lonio BTS-15', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (447, 1, 'PMX8', 'Parlante Magical X8', 'vistas/img/productos/default/anonymous.png', 3, 30000, 0, 0, '2025-03-06 13:30:20'),
 (448, 1, 'PMD', 'Parlante Maxell Distrikt', 'vistas/img/productos/default/anonymous.png', 3, 120000, 0, 0, '2025-03-06 13:30:20'),
-(449, 1, 'PMN', 'Parlante Maxell Nomad', 'vistas/img/productos/default/anonymous.png', 2, 70000, 0, 0, '2025-03-06 13:30:20'),
+(449, 1, 'PMN', 'Parlante Maxell Nomad', 'vistas/img/productos/default/anonymous.png', 3, 70000, 0, 0, '2025-03-07 21:57:54'),
 (450, 1, 'PMG2', 'Parlante MG2', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (451, 1, 'PM122', 'Parlante Mini 122', 'vistas/img/productos/default/anonymous.png', 7, 15000, 0, 0, '2025-03-06 13:30:20'),
 (452, 1, 'PMS', 'Parlante Mini Speaker ', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
@@ -599,7 +598,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (511, 1, 'PSLSLP890', 'Patillera Super Look SLP-890', 'vistas/img/productos/default/anonymous.png', 1, 60000, 0, 0, '2025-03-06 13:30:20'),
 (512, 1, 'PVGRV055', 'Patillera VGR V055', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (513, 1, 'PVGRV090', 'Patillera VGR V-090', 'vistas/img/productos/default/anonymous.png', 7, 30000, 0, 0, '2025-03-06 13:30:20'),
-(514, 1, 'PVGRV091', 'Patillera VGR V091', 'vistas/img/productos/default/anonymous.png', 16, 50000, 0, 0, '2025-03-06 13:30:20'),
+(514, 1, 'PVGRV091', 'Patillera VGR V091', 'vistas/img/productos/default/anonymous.png', 15, 50000, 0, 1, '2025-03-07 23:44:44'),
 (515, 1, 'PVGRV179', 'Patillera VGR V179', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (516, 1, 'PWMP', 'Patillera Wahl Mini Pro', 'vistas/img/productos/default/anonymous.png', 1, 65000, 0, 0, '2025-03-06 13:30:20'),
 (517, 1, 'PWSMDP', 'Patillera Wahl Suelta Mini de Pila', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
@@ -657,7 +656,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (569, 1, 'PB9600MAH', 'PowerBank 9600 mAh', 'vistas/img/productos/default/anonymous.png', 43, 10000, 0, 0, '2025-03-06 13:30:20'),
 (570, 1, 'PBFC10000MAH', 'PowerBank Fast Charging 10000 mAh ', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (571, 1, 'PBF12800MAH', 'PowerBank Fly 12800 mAh', 'vistas/img/productos/default/anonymous.png', 2, 60000, 0, 0, '2025-03-06 13:30:20'),
-(572, 1, 'PBH10000MAH', 'PowerBank Harvic 10000 mAh', 'vistas/img/productos/default/anonymous.png', 5, 30000, 0, 0, '2025-03-06 13:30:20'),
+(572, 1, 'PBH10000MAH', 'PowerBank Harvic 10000 mAh', 'vistas/img/productos/default/anonymous.png', 4, 30000, 0, 1, '2025-03-07 22:32:19'),
 (573, 1, 'PBH20000MAHPB604', 'PowerBank Harvic 20000 mAh PB604', 'vistas/img/productos/default/anonymous.png', 6, 65000, 0, 0, '2025-03-06 13:30:20'),
 (574, 1, 'PBIS20000MAH', 'PowerBank Ironbat solar 20000 mAh ', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (575, 1, 'PBK20000MAHKN87', 'PowerBank Kinotec 20000 mAh KN87', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
@@ -676,16 +675,16 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (588, 1, 'RBR105BT', 'Radio Beck R105BT', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
 (589, 1, 'RCMIKMK16', 'Radio CMiK MK16', 'vistas/img/productos/default/anonymous.png', 14, 20000, 0, 0, '2025-03-06 13:30:20'),
 (590, 1, 'RCMIKMK199', 'Radio CMIK MK199', 'vistas/img/productos/default/anonymous.png', 1, 70000, 0, 0, '2025-03-06 13:30:20'),
-(591, 1, 'RDCMC1', 'Radio de Comunicación Motorola C1', 'vistas/img/productos/default/anonymous.png', 54, 110000, 0, 0, '2025-03-06 13:30:20'),
-(592, 1, 'RDCMC6', 'Radio de Comunicación Motorola C6', 'vistas/img/productos/default/anonymous.png', 1, 110000, 0, 0, '2025-03-06 13:30:20'),
+(591, 1, 'RDCMC1', 'Radio de Comunicación Motorola C1', 'vistas/img/productos/default/anonymous.png', 114, 110000, 0, 40, '2025-03-07 23:47:35'),
+(592, 1, 'RDCMC6', 'Radio de Comunicación Motorola C6', 'vistas/img/productos/default/anonymous.png', 1, 110000, 0, 14, '2025-03-07 22:35:23'),
 (593, 1, 'RDCBUV9RP', 'Radio de Comunicaciones Baofeng UV9R Plus', 'vistas/img/productos/default/anonymous.png', 3, 110000, 0, 0, '2025-03-06 13:30:20'),
 (594, 1, 'RFTRX180', 'Radio FoxTech RX180', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
 (595, 1, 'RFKTF1489', 'Radio Full KTF-1489', 'vistas/img/productos/default/anonymous.png', 2, 35000, 0, 0, '2025-03-06 13:30:20'),
 (596, 1, 'RFKTF1490', 'Radio Full KTF-1490', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
 (597, 1, 'RGBT628', 'Radio Golo BT628', 'vistas/img/productos/default/anonymous.png', 2, 30000, 0, 0, '2025-03-06 13:30:20'),
 (598, 1, 'RGRX438', 'Radio Golon RX438', 'vistas/img/productos/default/anonymous.png', 8, 50000, 0, 0, '2025-03-06 13:30:20'),
-(599, 1, 'RGPUXPX3600BT', 'Radio Grabadora Pu Xing PX-3600BT', 'vistas/img/productos/default/anonymous.png', 1, 70000, 0, 0, '2025-03-06 13:30:20'),
-(600, 1, 'RGGTS1737', 'Radio Greatnice GTS 1737', 'vistas/img/productos/default/anonymous.png', 3, 30000, 0, 0, '2025-03-06 13:30:20'),
+(599, 1, 'RGPUXPX3600BT', 'Radio Grabadora Pu Xing PX-3600BT', 'vistas/img/productos/default/anonymous.png', 0, 70000, 0, 1, '2025-03-07 23:41:29'),
+(600, 1, 'RGGTS1737', 'Radio Greatnice GTS 1737', 'vistas/img/productos/default/anonymous.png', 2, 30000, 0, 1, '2025-03-07 22:33:22'),
 (601, 1, 'RJIOC2022', 'Radio JIOC 2022', 'vistas/img/productos/default/anonymous.png', 2, 30000, 0, 0, '2025-03-06 13:30:20'),
 (602, 1, 'RMM112BT', 'Radio Meier M112 BT', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
 (603, 1, 'RMMU05', 'Radio Meier MU05', 'vistas/img/productos/default/anonymous.png', 2, 35000, 0, 0, '2025-03-06 13:30:20'),
@@ -717,7 +716,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (629, 1, 'RSU', 'Radio Sony Usado', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (630, 1, 'RURIUR09BT', 'Radio Universal Royal IU R09BT', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 0, '2025-03-06 13:30:20'),
 (631, 1, 'RURR6023', 'Radio Universal Royal R6023', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
-(632, 1, 'RYF10U', 'Radio Yuegan F10U', 'vistas/img/productos/default/anonymous.png', 10, 30000, 0, 0, '2025-03-06 13:30:20'),
+(632, 1, 'RYF10U', 'Radio Yuegan F10U', 'vistas/img/productos/default/anonymous.png', 9, 30000, 0, 1, '2025-03-07 22:37:50'),
 (633, 1, 'RDCBBF88', 'Radios de Comunicación Baofeng BF-88', 'vistas/img/productos/default/anonymous.png', 18, 55000, 0, 0, '2025-03-06 13:30:20'),
 (634, 1, 'RDVANDOWLQA178', 'Reguladores de Voltaje ANDOWL QA-178', 'vistas/img/productos/default/anonymous.png', 2, 15000, 0, 0, '2025-03-06 13:30:20'),
 (635, 1, 'REDM', 'Reloj Espía de Mesa', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
@@ -725,13 +724,13 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (637, 1, 'PR15225', 'Rizador Remington 15225', 'vistas/img/productos/default/anonymous.png', 1, 110000, 0, 0, '2025-03-06 13:30:20'),
 (638, 1, 'RRCI63N1', 'Rizador Remington CI63N1', 'vistas/img/productos/default/anonymous.png', 1, 140000, 0, 0, '2025-03-06 13:30:20'),
 (639, 1, 'RW2SAS14A', 'Rizadora Wet 2 Style AS14A', 'vistas/img/productos/default/anonymous.png', 1, 140000, 0, 0, '2025-03-06 13:30:20'),
-(640, 1, 'RE4K', 'Roku Express 4K', 'vistas/img/productos/default/anonymous.png', 3, 110000, 0, 0, '2025-03-06 13:30:20'),
+(640, 1, 'RE4K', 'Roku Express 4K', 'vistas/img/productos/default/anonymous.png', 2, 110000, 0, 1, '2025-03-07 22:41:32'),
 (641, 1, 'RP4K', 'Roku Premier 4K', 'vistas/img/productos/default/anonymous.png', 2, 115000, 0, 0, '2025-03-06 13:30:20'),
 (642, 1, 'RSS', 'Roku Streaming Stick', 'vistas/img/productos/default/anonymous.png', 1, 120000, 0, 0, '2025-03-06 13:30:20'),
 (643, 1, 'RETBTPLXC220G3V', 'Router ETB TP-Link XC220-G3V', 'vistas/img/productos/default/anonymous.png', 7, 30000, 0, 0, '2025-03-06 13:30:20'),
-(644, 1, 'RHAR161', 'Router Huawei AR161', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
+(644, 1, 'RHAR161', 'Router Huawei AR161', 'vistas/img/productos/default/anonymous.png', 0, 30000, 0, 1, '2025-03-07 23:47:59'),
 (645, 1, 'RM', 'Router Movistar', 'vistas/img/productos/default/anonymous.png', 3, 30000, 0, 0, '2025-03-06 13:30:20'),
-(646, 1, 'RN300R', 'Router N300 Ruijie', 'vistas/img/productos/default/anonymous.png', 9, 45000, 0, 0, '2025-03-06 13:30:20'),
+(646, 1, 'RN300R', 'Router N300 Ruijie', 'vistas/img/productos/default/anonymous.png', 8, 45000, 0, 1, '2025-03-07 23:22:53'),
 (647, 1, 'RTMF3TA', 'Router Tenda Modelo F3 Tres Antenas', 'vistas/img/productos/default/anonymous.png', 2, 60000, 0, 0, '2025-03-06 13:30:20'),
 (648, 1, 'RTML301DA', 'Router Tenda Modelo L301 Dos Antenas', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 0, '2025-03-06 13:30:20'),
 (649, 1, 'SDUSUN9S', 'Secador de Uñas SUN 9S', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
@@ -745,7 +744,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (657, 1, 'SRRE2023', 'Secador Remlngton RE2023', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
 (658, 1, 'SRRE2043', 'Secador Remlngton RE2043', 'vistas/img/productos/default/anonymous.png', 3, 35000, 0, 0, '2025-03-06 13:30:20'),
 (659, 1, 'SRRG2051', 'Secador Remlngton RG2051', 'vistas/img/productos/default/anonymous.png', 5, 25000, 0, 0, '2025-03-06 13:30:20'),
-(660, 1, 'SR5005', 'Secador Revlon 5005', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 0, '2025-03-06 13:30:20'),
+(660, 1, 'SR5005', 'Secador Revlon 5005', 'vistas/img/productos/default/anonymous.png', 2, 50000, 0, 1, '2025-03-07 23:47:35'),
 (661, 1, 'SRRB408', 'Secador Revlon RB408', 'vistas/img/productos/default/anonymous.png', 2, 10000, 0, 0, '2025-03-06 13:30:20'),
 (662, 1, 'SSLSLP3200', 'Secador Super Lool SLP-3200', 'vistas/img/productos/default/anonymous.png', 1, 80000, 0, 0, '2025-03-06 13:30:20'),
 (663, 1, 'STS3900W', 'Secador Turbox Spartaco 3900 Watts', 'vistas/img/productos/default/anonymous.png', 1, 100000, 0, 0, '2025-03-06 13:30:20'),
@@ -773,7 +772,7 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (685, 1, 'SWT500+P', 'Smart Watch T500+ Pro', 'vistas/img/productos/default/anonymous.png', 3, 40000, 0, 0, '2025-03-06 13:30:20'),
 (686, 1, 'SMU8AAADP', 'Smart Watch U8 AAA Doble Pulso', 'vistas/img/productos/default/anonymous.png', 11, 65000, 0, 0, '2025-03-06 13:30:20'),
 (687, 1, 'SWU8U', 'Smart Watch U8 Ultra', 'vistas/img/productos/default/anonymous.png', 19, 25000, 0, 0, '2025-03-06 13:30:20'),
-(688, 1, 'SWU7P', 'Smart Watch Ultra 7 Pulsos', 'vistas/img/productos/default/anonymous.png', 32, 45000, 0, 0, '2025-03-06 13:30:20'),
+(688, 1, 'SWU7P', 'Smart Watch Ultra 7 Pulsos', 'vistas/img/productos/default/anonymous.png', 31, 45000, 0, 1, '2025-03-07 23:47:34'),
 (689, 1, 'SWUWMSICS51', 'Smart Watch UWMSIC S51', 'vistas/img/productos/default/anonymous.png', 1, 130000, 0, 0, '2025-03-06 13:30:20'),
 (690, 1, 'SWW26', 'Smart Watch W26', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-06 13:30:20'),
 (691, 1, 'SWY68', 'Smart Watch Y68', 'vistas/img/productos/default/anonymous.png', 89, 15000, 0, 0, '2025-03-06 13:30:20'),
@@ -782,26 +781,26 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (694, 1, 'SC', 'Sup Control ', 'vistas/img/productos/default/anonymous.png', 2, 20000, 0, 0, '2025-03-06 13:30:20'),
 (695, 1, 'SUPS', 'SUP Sencillo', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (696, 1, 'TM10117P', 'Tablero Mágico 10, 11 y 7 Pulgadas ', 'vistas/img/productos/default/anonymous.png', 12, 10000, 0, 0, '2025-03-06 13:30:20'),
-(697, 1, 'TA1T7', 'Tablet Alcatel 1T7', 'vistas/img/productos/default/anonymous.png', 1, 160000, 0, 0, '2025-03-06 13:30:20'),
-(698, 1, 'TAFHD8P', 'Tablet Amazon Fire HD 8 Pulgadas', 'vistas/img/productos/default/anonymous.png', 3, 280000, 0, 0, '2025-03-06 13:30:20'),
+(697, 1, 'TA1T7', 'Tablet Alcatel 1T7', 'vistas/img/productos/default/anonymous.png', 0, 160000, 0, 1, '2025-03-07 23:47:35'),
+(698, 1, 'TAFHD8P', 'Tablet Amazon Fire HD 8 Pulgadas', 'vistas/img/productos/default/anonymous.png', 2, 280000, 0, 1, '2025-03-07 22:56:00'),
 (699, 1, 'TBR704', 'Tablet Bititech R704', 'vistas/img/productos/default/anonymous.png', 1, 70000, 0, 0, '2025-03-06 13:30:20'),
 (700, 1, 'THMPPW09', 'Tablet Huawei Matte Pad Pro W09', 'vistas/img/productos/default/anonymous.png', 1, 800000, 0, 0, '2025-03-06 13:30:20'),
 (701, 1, 'TKOMQ8', 'Tablet Kid Olax Magic Q8', 'vistas/img/productos/default/anonymous.png', 2, 220000, 0, 0, '2025-03-06 13:30:20'),
 (702, 1, 'TKSL10PM108', 'Tablet Kids S-Linda 10 Pulgadas M108', 'vistas/img/productos/default/anonymous.png', 8, 350000, 0, 0, '2025-03-06 13:30:20'),
 (703, 1, 'TKK7', 'Tablet Krono K7', 'vistas/img/productos/default/anonymous.png', 1, 180000, 0, 0, '2025-03-06 13:30:20'),
 (704, 1, 'TKK', 'Tablet Krono Kids ', 'vistas/img/productos/default/anonymous.png', 31, 155000, 0, 0, '2025-03-06 13:30:20'),
-(705, 1, 'TKNX2', 'Tablet Krono Net X2', 'vistas/img/productos/default/anonymous.png', 14, 320000, 0, 0, '2025-03-06 13:30:20'),
+(705, 1, 'TKNX2', 'Tablet Krono Net X2', 'vistas/img/productos/default/anonymous.png', 13, 320000, 0, 1, '2025-03-07 23:04:03'),
 (706, 1, 'TKNZ', 'Tablet Krono Net Z', 'vistas/img/productos/default/anonymous.png', 4, 180000, 0, 0, '2025-03-06 13:30:20'),
 (707, 1, 'TLLY700', 'Tablet Legion Lenovo Y700', 'vistas/img/productos/default/anonymous.png', 1, 800000, 0, 0, '2025-03-06 13:30:20'),
 (708, 1, 'TLTM11', 'Tablet Lenovo Tab M11', 'vistas/img/productos/default/anonymous.png', 2, 720000, 0, 0, '2025-03-06 13:30:20'),
 (709, 1, 'TSGAP+', 'Tablet Samsung Galaxy A9+', 'vistas/img/productos/default/anonymous.png', 8, 400000, 0, 0, '2025-03-06 13:30:20'),
 (710, 1, 'TSGTA7LSMT220', 'Tablet Samsung Galaxy Tab A7 Lite SMT220', 'vistas/img/productos/default/anonymous.png', 2, 380000, 0, 0, '2025-03-06 13:30:20'),
 (711, 1, 'TSGTA8SMX200', 'Tablet Samsung Galaxy Tab A8 SMX200', 'vistas/img/productos/default/anonymous.png', 1, 600000, 0, 0, '2025-03-06 13:30:20'),
-(712, 1, 'TSKTS25', 'Tablet Smart King Tab S25 ', 'vistas/img/productos/default/anonymous.png', 2, 360000, 0, 0, '2025-03-06 13:30:20'),
+(712, 1, 'TSKTS25', 'Tablet Smart King Tab S25 ', 'vistas/img/productos/default/anonymous.png', 1, 360000, 0, 1, '2025-03-07 23:24:42'),
 (713, 1, 'TMYMPCK06', 'Taclado MYM para Computador K06', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (714, 1, 'TDTDC', 'TDT Dcolor', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (715, 1, 'TDTDXG', 'TDT DXG', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
-(716, 1, 'TDTK', 'TDT Krono', 'vistas/img/productos/default/anonymous.png', 15, 35000, 0, 0, '2025-03-06 13:30:20'),
+(716, 1, 'TDTK', 'TDT Krono', 'vistas/img/productos/default/anonymous.png', 25, 35000, 0, 10, '2025-03-07 22:40:50'),
 (717, 1, 'TII', 'Teclado Iconic Inalámbrico', 'vistas/img/productos/default/anonymous.png', 1, 20000, 0, 0, '2025-03-06 13:30:20'),
 (718, 1, 'TSMART', 'Teclados Smart ', 'vistas/img/productos/default/anonymous.png', 3, 15000, 0, 0, '2025-03-06 13:30:20'),
 (719, 1, 'TIAS280', 'Teléfono Inalámbrico Alcatel S280', 'vistas/img/productos/default/anonymous.png', 2, 90000, 0, 0, '2025-03-06 13:30:20'),
@@ -818,9 +817,9 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (730, 1, 'TPC', 'Trípode para Cabina', 'vistas/img/productos/default/anonymous.png', 3, 25000, 0, 0, '2025-03-06 13:30:20'),
 (731, 1, 'TPC3110', 'Trípode para Celular 3110', 'vistas/img/productos/default/anonymous.png', 4, 15000, 0, 0, '2025-03-06 13:30:20'),
 (732, 1, 'TVBMYM2RAM', 'TV Box MYM 2 RAM', 'vistas/img/productos/default/anonymous.png', 2, 80000, 0, 0, '2025-03-06 13:30:20'),
-(733, 1, 'TVBNJ16', 'TV Box Nanotec J16', 'vistas/img/productos/default/anonymous.png', 4, 75000, 0, 0, '2025-03-06 13:30:20'),
-(734, 1, 'TVBX4K', 'TV Box Xioami 4K', 'vistas/img/productos/default/anonymous.png', 5, 170000, 0, 0, '2025-03-06 13:30:20'),
-(735, 1, 'USBB', 'USB Bluetooth', 'vistas/img/productos/default/anonymous.png', 2, 12000, 0, 0, '2025-03-06 13:30:20'),
+(733, 1, 'TVBNJ16', 'TV Box Nanotec J16', 'vistas/img/productos/default/anonymous.png', 3, 75000, 0, 1, '2025-03-07 22:24:54'),
+(734, 1, 'TVBX4K', 'TV Box Xioami 4K', 'vistas/img/productos/default/anonymous.png', 4, 170000, 0, 1, '2025-03-07 22:59:00'),
+(735, 1, 'USBB', 'USB Bluetooth', 'vistas/img/productos/default/anonymous.png', 1, 12000, 0, 1, '2025-03-07 23:38:17'),
 (736, 1, 'USBJ', 'USB Jaster ', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
 (737, 1, 'USBK16GB', 'USB Kingston 16Gb', 'vistas/img/productos/default/anonymous.png', 1, 13000, 0, 0, '2025-03-06 13:30:20'),
 (738, 1, 'VPCGD505', 'Ventilador para Carro GD-505', 'vistas/img/productos/default/anonymous.png', 1, 10000, 0, 0, '2025-03-06 13:30:20'),
@@ -848,9 +847,9 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (760, 2, 'PKKM911', 'Plancha Kemey KM-911', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (761, 2, 'PRRE2077', 'Plancha Remilton RE-2077', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (762, 2, 'RNR1490', 'Radio Nanotec R 1490', 'vistas/img/productos/default/anonymous.png', 2, 30000, 0, 0, '2025-03-06 13:30:20'),
-(763, 2, 'RNR1175', 'Radio Nanotec R1175', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20');
+(763, 2, 'RNR1175', 'Radio Nanotec R1175', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-06 13:30:20'),
+(764, 2, 'RSR100', 'Radio Sonivox R100', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20');
 INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`, `stock`, `precio_compra`, `precio_venta`, `ventas`, `fecha`) VALUES
-(764, 2, 'RSR100', 'Radio Sonivox R100', 'vistas/img/productos/default/anonymous.png', 1, 30000, 0, 0, '2025-03-06 13:30:20'),
 (765, 2, 'RSR104', 'Radio Sonivox R104', 'vistas/img/productos/default/anonymous.png', 1, 15000, 0, 0, '2025-03-06 13:30:20'),
 (766, 2, 'SD2008', 'Secador Daebo 2008', 'vistas/img/productos/default/anonymous.png', 1, 60000, 0, 0, '2025-03-06 13:30:20'),
 (767, 2, 'SKKM5816', 'Secador Kemey KM-5816', 'vistas/img/productos/default/anonymous.png', 1, 35000, 0, 0, '2025-03-06 13:30:20'),
@@ -869,17 +868,37 @@ INSERT INTO `productos` (`id`, `id_categoria`, `codigo`, `descripcion`, `imagen`
 (780, 3, 'CSCC4K', 'Cámara Sport con Control 4K', 'vistas/img/productos/default/anonymous.png', 2, 70000, 0, 0, '2025-03-06 13:30:20'),
 (781, 3, 'CCIP', 'Cepillo Conair Infiniti Pro', 'vistas/img/productos/default/anonymous.png', 1, 140000, 0, 0, '2025-03-06 13:30:20'),
 (782, 3, 'CPR', 'Controles para Rocku', 'vistas/img/productos/default/anonymous.png', 6, 10000, 0, 0, '2025-03-06 13:30:20'),
-(783, 3, 'MLC1TE', 'Manos Libres para C1 Tipo Escolta', 'vistas/img/productos/default/anonymous.png', 8, 15000, 0, 0, '2025-03-06 13:30:20'),
+(783, 3, 'MLC1TE', 'Manos Libres para C1 Tipo Escolta', 'vistas/img/productos/default/anonymous.png', 46, 15000, 0, 12, '2025-03-07 23:44:44'),
 (784, 3, 'B16U', 'Micrófono Inalámbrico Universal B16 U', 'vistas/img/productos/default/anonymous.png', 1, 40000, 0, 0, '2025-03-06 13:30:20'),
 (785, 3, 'PPSW', 'Pulsos para Smart Watch', 'vistas/img/productos/default/anonymous.png', 6, 10000, 0, 0, '2025-03-06 13:30:20'),
 (786, 3, 'RNA302', 'Radio Nia A302', 'vistas/img/productos/default/anonymous.png', 2, 40000, 0, 0, '2025-03-06 13:30:20'),
 (787, 3, 'RRGG1207', 'Radio Reloj Gynipot G1207', 'vistas/img/productos/default/anonymous.png', 2, 35000, 0, 0, '2025-03-06 13:30:20'),
-(788, 3, 'TDAX1', 'Tomas de Alexa X 1', 'vistas/img/productos/default/anonymous.png', 13, 20000, 0, 0, '2025-03-06 13:30:20');
+(788, 3, 'TDAX1', 'Tomas de Alexa X 1', 'vistas/img/productos/default/anonymous.png', 13, 20000, 0, 0, '2025-03-06 13:30:20'),
+(789, 1, 'RSP27', 'Radio Sony P27', 'vistas/img/productos/default/anonymous.png', 3, 170000, 0, 1, '2025-03-07 23:47:35'),
+(790, 1, 'MJY760P', 'Masajeador JY 760 Plus', 'vistas/img/productos/default/anonymous.png', 2, 45000, 0, 0, '2025-03-07 21:37:21'),
+(791, 1, 'PMYMTD063US', 'Parlantes MYM TD063US', 'vistas/img/productos/default/anonymous.png', 11, 15000, 0, 1, '2025-03-07 23:24:42'),
+(792, 1, 'CRCDV', 'Control Rocku Comando de Voz', 'vistas/img/productos/default/anonymous.png', 1, 50000, 0, 0, '2025-03-07 21:39:11'),
+(793, 1, 'RRPAJT330', 'Radio Reloj Phillips AJT330', 'vistas/img/productos/default/anonymous.png', 1, 60000, 0, 0, '2025-03-07 21:42:35'),
+(794, 1, 'PBR50000MAH', 'PowerBank Ramitech 50000mAh', 'vistas/img/productos/default/anonymous.png', 3, 105000, 0, 0, '2025-03-07 21:43:25'),
+(795, 1, 'PBK30000MAHKN01', 'PowerBank Kinotec 30000mAh KN91', 'vistas/img/productos/default/anonymous.png', 2, 75000, 0, 0, '2025-03-07 21:44:14'),
+(796, 1, 'PBH20000MAHPB610', 'PowerBank Harvic 20000mAh PB610', 'vistas/img/productos/default/anonymous.png', 2, 55000, 0, 1, '2025-03-07 23:39:56'),
+(797, 1, 'RX', 'Router Xioami', 'vistas/img/productos/default/anonymous.png', 1, 25000, 0, 0, '2025-03-07 21:45:57'),
+(798, 1, 'MP3GPX8GB', 'MP3 GPX 8Gb', 'vistas/img/productos/default/anonymous.png', 1, 135000, 0, 0, '2025-03-07 21:47:07'),
+(799, 1, 'ANEWESTM10', 'Audífonos NEWEST M10', 'vistas/img/productos/default/anonymous.png', 5, 15000, 0, 0, '2025-03-07 21:50:14'),
+(800, 1, 'ALLP13', 'Audífonos Lenovo LP13', 'vistas/img/productos/default/anonymous.png', 2, 30000, 0, 0, '2025-03-07 21:51:05'),
+(801, 1, 'AALTDT', 'Antenas Aéreas Lazer TDT', 'vistas/img/productos/default/anonymous.png', 2, 45000, 0, 0, '2025-03-07 21:52:21'),
+(802, 1, 'BVAAA', 'Baterías Varta AAA', 'vistas/img/productos/default/anonymous.png', 10, 2000, 0, 0, '2025-03-07 21:55:58'),
+(803, 1, 'TASDUO280', 'Teléfono Alcatel DUO S280', 'vistas/img/productos/default/anonymous.png', 1, 150000, 0, 0, '2025-03-07 21:57:36'),
+(804, 1, 'TLM9', 'Tablet Lenovo M9', 'vistas/img/productos/default/anonymous.png', 4, 400000, 0, 0, '2025-03-07 21:59:06'),
+(805, 1, 'RZTESC', 'Router ZTE Sim Card', 'vistas/img/productos/default/anonymous.png', 0, 115000, 0, 4, '2025-03-07 22:10:06'),
+(806, 1, 'BPC1', 'Baterías para C1', 'vistas/img/productos/default/anonymous.png', 0, 6000, 0, 2, '2025-03-07 22:16:21'),
+(807, 1, 'CPC1', 'Cargadores para C1', 'vistas/img/productos/default/anonymous.png', 0, 15000, 0, 6, '2025-03-07 22:18:06'),
+(808, 1, 'ASAIRBUDS3', 'Audífonos Samsung Air Buds 3', 'vistas/img/productos/default/anonymous.png', 0, 260000, 0, 1, '2025-03-07 22:23:17');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -895,16 +914,17 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `perfil`, `foto`, `estado`, `ultimo_login`, `fecha`) VALUES
-(1, 'Wilmer Medina', 'wilmer321', '$2a$07$asxx54ahjppf45sd87a5auKh5RGUziHt/owhLE1xJ1mpjPefnsHQC', 'Administrador', 'vistas/img/usuarios/default/anonymous.png', 1, '2025-03-06 14:33:38', '2025-03-06 19:33:38');
+(1, 'Wilmer Medina', 'wilmer321', '$2a$07$asxx54ahjppf45sd87a5auKh5RGUziHt/owhLE1xJ1mpjPefnsHQC', 'Administrador', 'vistas/img/usuarios/default/anonymous.png', 1, '2025-03-07 17:06:16', '2025-03-07 22:06:16'),
+(67, 'Giovanny Murcia', 'giomurcia', '$2a$07$asxx54ahjppf45sd87a5auqU6fRKZIiQIIZq/PPjjqqGVWcjRZl4.', 'Vendedor', '', 1, '2025-03-07 17:06:37', '2025-03-07 22:06:37');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ventas`
+-- Estructura de tabla para la tabla `ventas`
 --
 
 CREATE TABLE `ventas` (
@@ -923,72 +943,152 @@ CREATE TABLE `ventas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `ventas`
+--
+
+INSERT INTO `ventas` (`id`, `codigo`, `id_cliente`, `id_vendedor`, `productos`, `impuesto`, `neto`, `total`, `precio_venta`, `metodo_pago`, `fecha`, `clienTe_descripcion`) VALUES
+(71, 1, 0, 1, '[{\"id\":\"41\",\"descripcion\":\"Audífonos Brightside BSE-801\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"30000\",\"total\":30000}]', 0, 30000, 30000, 30.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(72, 2, 0, 67, '[{\"id\":\"805\",\"descripcion\":\"Router ZTE Sim Card\",\"cantidad\":\"4\",\"stock\":\"0\",\"precio\":\"140000\",\"total\":560000}]', 0, 560000, 560000, 140.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(73, 3, 0, 1, '[{\"id\":\"125\",\"descripcion\":\"Audífonos Sony XB400\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"30000\",\"total\":30000}]', 0, 30000, 30000, 30.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(74, 4, 0, 1, '[{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"6\",\"stock\":\"8\",\"precio\":\"125000\",\"total\":750000}]', 0, 750000, 750000, 125.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(75, 5, 0, 67, '[{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"12\",\"stock\":\"142\",\"precio\":\"135000\",\"total\":1620000}]', 0, 1620000, 1620000, 135.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(76, 6, 0, 67, '[{\"id\":\"806\",\"descripcion\":\"Baterías para C1\",\"cantidad\":\"2\",\"stock\":\"0\",\"precio\":\"26000\",\"total\":52000}]', 0, 52000, 52000, 26.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(77, 7, 0, 67, '[{\"id\":\"807\",\"descripcion\":\"Cargadores para C1\",\"cantidad\":\"6\",\"stock\":\"0\",\"precio\":\"21666.67\",\"total\":130000.01999999999}]', 0, 130000, 130000, 21.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(78, 8, 0, 67, '[{\"id\":\"592\",\"descripcion\":\"Radio de Comunicación Motorola C6\",\"cantidad\":\"6\",\"stock\":\"1\",\"precio\":\"140000\",\"total\":840000}]', 0, 840000, 840000, 140.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(79, 9, 0, 1, '[{\"id\":\"286\",\"descripcion\":\"Grabadora Tipo Periodista Sony Usadas 440\",\"cantidad\":\"1\",\"stock\":\"30\",\"precio\":\"90000\",\"total\":90000}]', 0, 90000, 90000, 90.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(80, 10, 0, 1, '[{\"id\":\"808\",\"descripcion\":\"Audífonos Samsung Air Buds 3\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"300000\",\"total\":300000}]', 0, 300000, 300000, 300.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(81, 11, 0, 67, '[{\"id\":\"199\",\"descripcion\":\"Cámara Robótica 3 Antenas\",\"cantidad\":\"1\",\"stock\":\"11\",\"precio\":\"50000\",\"total\":50000}]', 0, 50000, 50000, 50.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(82, 12, 0, 1, '[{\"id\":\"733\",\"descripcion\":\"TV Box Nanotec J16\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"100000\",\"total\":100000}]', 0, 100000, 100000, 100.00, 'Efectivo', '2025-02-26 22:02:37', ''),
+(83, 13, 0, 1, '[{\"id\":\"65\",\"descripcion\":\"Audífonos JBL Tune 520\",\"cantidad\":\"55\",\"stock\":\"4\",\"precio\":\"156363.64\",\"total\":8600000.200000001}]', 0, 8600000, 8600000, 156.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(84, 14, 0, 1, '[{\"id\":\"389\",\"descripcion\":\"Parlante Alexa Echo Dot 5ta Generación\",\"cantidad\":\"1\",\"stock\":\"14\",\"precio\":\"185000\",\"total\":185000}]', 0, 185000, 185000, 185.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(85, 15, 0, 67, '[{\"id\":\"366\",\"descripcion\":\"Mouse Gamer Inalámbrico\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"35000\",\"total\":35000}]', 0, 35000, 35000, 35.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(86, 16, 0, 67, '[{\"id\":\"572\",\"descripcion\":\"PowerBank Harvic 10000 mAh\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"55000\",\"total\":55000}]', 0, 55000, 55000, 55.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(87, 17, 0, 67, '[{\"id\":\"47\",\"descripcion\":\"Audífonos de Diadema Shuer SE-5222\",\"cantidad\":\"2\",\"stock\":\"2\",\"precio\":\"25000\",\"total\":50000}]', 0, 50000, 50000, 25.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(88, 18, 0, 67, '[{\"id\":\"600\",\"descripcion\":\"Radio Greatnice GTS 1737\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"50000\",\"total\":50000}]', 0, 50000, 50000, 50.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(89, 19, 0, 67, '[{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"1\",\"stock\":\"35\",\"precio\":\"120000\",\"total\":120000}]', 0, 120000, 120000, 120.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(90, 20, 0, 67, '[{\"id\":\"592\",\"descripcion\":\"Radio de Comunicación Motorola C6\",\"cantidad\":\"6\",\"stock\":\"1\",\"precio\":\"140000\",\"total\":840000}]', 0, 840000, 840000, 140.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(91, 21, 0, 67, '[{\"id\":\"592\",\"descripcion\":\"Radio de Comunicación Motorola C6\",\"cantidad\":\"2\",\"stock\":\"1\",\"precio\":\"140000\",\"total\":280000}]', 0, 280000, 280000, 140.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(92, 22, 0, 67, '[{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"1\",\"stock\":\"7\",\"precio\":\"150000\",\"total\":150000}]', 0, 150000, 150000, 150.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(93, 23, 0, 67, '[{\"id\":\"142\",\"descripcion\":\"Base de Computador Madera\",\"cantidad\":\"3\",\"stock\":\"0\",\"precio\":\"50000\",\"total\":150000}]', 0, 150000, 150000, 50.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(94, 24, 0, 67, '[{\"id\":\"254\",\"descripcion\":\"Disco Duro Toshiba 1TB\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"230000\",\"total\":230000}]', 0, 230000, 230000, 230.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(95, 25, 0, 67, '[{\"id\":\"632\",\"descripcion\":\"Radio Yuegan F10U\",\"cantidad\":\"1\",\"stock\":\"9\",\"precio\":\"45000\",\"total\":45000}]', 0, 45000, 45000, 45.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(96, 26, 0, 67, '[{\"id\":\"267\",\"descripcion\":\"Fire TV Stick 4K\",\"cantidad\":\"1\",\"stock\":\"6\",\"precio\":\"160000\",\"total\":160000}]', 0, 160000, 160000, 160.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(97, 27, 0, 67, '[{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"1\",\"stock\":\"34\",\"precio\":\"120000\",\"total\":120000}]', 0, 120000, 120000, 120.00, 'Efectivo', '2025-02-27 22:30:16', ''),
+(98, 28, 0, 1, '[{\"id\":\"716\",\"descripcion\":\"TDT Krono\",\"cantidad\":\"10\",\"stock\":\"25\",\"precio\":\"40000\",\"total\":400000}]', 0, 400000, 400000, 40.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(99, 29, 0, 1, '[{\"id\":\"393\",\"descripcion\":\"Parlante Alexa Echo Show 5 Pulgadas\",\"cantidad\":\"1\",\"stock\":\"9\",\"precio\":\"300000\",\"total\":300000}]', 0, 300000, 300000, 300.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(100, 30, 0, 1, '[{\"id\":\"640\",\"descripcion\":\"Roku Express 4K\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"140000\",\"total\":140000}]', 0, 140000, 140000, 140.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(101, 31, 0, 1, '[{\"id\":\"383\",\"descripcion\":\"Onn Watch 4K\",\"cantidad\":\"1\",\"stock\":\"17\",\"precio\":\"130000\",\"total\":130000}]', 0, 130000, 130000, 130.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(102, 32, 0, 1, '[{\"id\":\"389\",\"descripcion\":\"Parlante Alexa Echo Dot 5ta Generación\",\"cantidad\":\"1\",\"stock\":\"13\",\"precio\":\"180000\",\"total\":180000}]', 0, 180000, 180000, 180.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(103, 33, 0, 1, '[{\"id\":\"283\",\"descripcion\":\"Grabadora Tipo Periodista Digital de 8GB\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"100000\",\"total\":100000}]', 0, 100000, 100000, 100.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(104, 34, 0, 67, '[{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"1\",\"stock\":\"141\",\"precio\":\"140000\",\"total\":140000}]', 0, 140000, 140000, 140.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(105, 35, 0, 67, '[{\"id\":\"20\",\"descripcion\":\"Afeitadora VGR V332\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"105000\",\"total\":105000}]', 0, 105000, 105000, 105.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(106, 36, 0, 67, '[{\"id\":\"235\",\"descripcion\":\"Chromecast HD\",\"cantidad\":\"2\",\"stock\":\"0\",\"precio\":\"240000\",\"total\":480000}]', 0, 480000, 480000, 240.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(107, 37, 0, 67, '[{\"id\":\"426\",\"descripcion\":\"Parlante JBL Charge 5\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"570000\",\"total\":570000}]', 0, 570000, 570000, 570.00, 'Efectivo', '2025-02-28 22:40:50', ''),
+(108, 38, 0, 1, '[{\"id\":\"430\",\"descripcion\":\"Parlante JBL Go 2\",\"cantidad\":\"1\",\"stock\":\"9\",\"precio\":\"100000\",\"total\":100000}]', 0, 100000, 100000, 100.00, '', '2025-03-01 22:54:15', ''),
+(109, 39, 0, 1, '[{\"id\":\"395\",\"descripcion\":\"Parlante Alexa Echo Spot\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"285000\",\"total\":285000}]', 0, 285000, 285000, 285.00, '', '2025-03-01 22:54:15', ''),
+(110, 40, 0, 1, '[{\"id\":\"698\",\"descripcion\":\"Tablet Amazon Fire HD 8 Pulgadas\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"300000\",\"total\":300000}]', 0, 300000, 300000, 300.00, '', '2025-03-01 22:54:15', ''),
+(111, 41, 0, 1, '[{\"id\":\"30\",\"descripcion\":\"Audífonos AirPods con Pantalla ANC ENC\",\"cantidad\":\"1\",\"stock\":\"6\",\"precio\":\"70000\",\"total\":70000}]', 0, 70000, 70000, 70.00, '', '2025-03-01 22:54:15', ''),
+(112, 42, 0, 1, '[{\"id\":\"734\",\"descripcion\":\"TV Box Xioami 4K\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"200000\",\"total\":200000}]', 0, 200000, 200000, 200.00, '', '2025-03-01 22:54:15', ''),
+(113, 43, 0, 1, '[{\"id\":\"394\",\"descripcion\":\"Parlante Alexa Echo Show 5ta Generación\",\"cantidad\":\"1\",\"stock\":\"1\",\"precio\":\"300000\",\"total\":300000}]', 0, 300000, 300000, 300.00, '', '2025-03-01 22:54:15', ''),
+(114, 44, 0, 1, '[{\"id\":\"273\",\"descripcion\":\"Game TV Stick 8k\",\"cantidad\":\"1\",\"stock\":\"6\",\"precio\":\"160000\",\"total\":160000}]', 0, 160000, 160000, 160.00, '', '2025-03-01 22:54:15', ''),
+(115, 45, 0, 1, '[{\"id\":\"223\",\"descripcion\":\"Cargadores de Pila Beston y Maxuss 1500 mAh\",\"cantidad\":\"1\",\"stock\":\"10\",\"precio\":\"40000\",\"total\":40000}]', 0, 40000, 40000, 40.00, '', '2025-03-01 22:54:15', ''),
+(116, 46, 0, 1, '[{\"id\":\"705\",\"descripcion\":\"Tablet Krono Net X2\",\"cantidad\":\"1\",\"stock\":\"13\",\"precio\":\"420000\",\"total\":420000}]', 0, 420000, 420000, 420.00, '', '2025-03-01 22:54:15', ''),
+(117, 47, 0, 1, '[{\"id\":\"199\",\"descripcion\":\"Cámara Robótica 3 Antenas\",\"cantidad\":\"2\",\"stock\":\"9\",\"precio\":\"50000\",\"total\":100000}]', 0, 100000, 100000, 50.00, '', '2025-03-01 22:54:15', ''),
+(118, 48, 0, 1, '[{\"id\":\"314\",\"descripcion\":\"Memoria Micro SD Harvic 16Gb \",\"cantidad\":\"2\",\"stock\":\"29\",\"precio\":\"20000\",\"total\":40000}]', 0, 40000, 40000, 20.00, '', '2025-03-01 22:54:15', ''),
+(119, 49, 0, 1, '[{\"id\":\"355\",\"descripcion\":\"Micrófonos para Celular K8\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"30000\",\"total\":30000}]', 0, 30000, 30000, 30.00, '', '2025-03-01 22:54:15', ''),
+(120, 50, 0, 67, '[{\"id\":\"783\",\"descripcion\":\"Manos Libres para C1 Tipo Escolta\",\"cantidad\":\"2\",\"stock\":\"56\",\"precio\":\"20000\",\"total\":40000}]', 0, 40000, 40000, 20.00, 'Efectivo', '2025-03-01 22:54:15', ''),
+(121, 51, 0, 67, '[{\"id\":\"212\",\"descripcion\":\"Cámara Wi-Fi Q11\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"60000\",\"total\":60000}]', 0, 60000, 60000, 60.00, '', '2025-03-01 22:54:15', ''),
+(122, 52, 0, 67, '[{\"id\":\"409\",\"descripcion\":\"Parlante Echo Dot Kids\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"220000\",\"total\":220000}]', 0, 220000, 220000, 220.00, '', '2025-03-01 22:54:15', ''),
+(123, 53, 0, 67, '[{\"id\":\"426\",\"descripcion\":\"Parlante JBL Charge 5\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"560000\",\"total\":560000}]', 0, 560000, 560000, 560.00, '', '2025-03-01 22:54:15', ''),
+(124, 54, 0, 67, '[{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"2\",\"stock\":\"32\",\"precio\":\"115000\",\"total\":230000}]', 0, 230000, 230000, 115.00, '', '2025-03-01 22:54:15', ''),
+(125, 55, 0, 67, '[{\"id\":\"362\",\"descripcion\":\"Mouse Ergonómico Alámbrico\",\"cantidad\":\"1\",\"stock\":\"6\",\"precio\":\"30000\",\"total\":30000}]', 0, 30000, 30000, 30.00, '', '2025-03-01 22:54:15', ''),
+(126, 56, 0, 67, '[{\"id\":\"268\",\"descripcion\":\"FIRE TV Stick HD\",\"cantidad\":\"1\",\"stock\":\"7\",\"precio\":\"130000\",\"total\":130000}]', 0, 130000, 130000, 130.00, '', '2025-03-01 22:54:15', ''),
+(127, 57, 0, 67, '[{\"id\":\"148\",\"descripcion\":\"Batería para Iphone\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"60000\",\"total\":60000}]', 0, 60000, 60000, 60.00, '', '2025-03-01 22:54:15', ''),
+(128, 58, 0, 67, '[{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"1\",\"stock\":\"31\",\"precio\":\"120000\",\"total\":120000},{\"id\":\"358\",\"descripcion\":\"Mini Speaker Parlante Bluetooth WS-887\",\"cantidad\":\"1\",\"stock\":\"68\",\"precio\":\"20000\",\"total\":20000},{\"id\":\"258\",\"descripcion\":\"DVD 168\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"90000\",\"total\":90000},{\"id\":\"394\",\"descripcion\":\"Parlante Alexa Echo Show 5ta Generación\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"300000\",\"total\":300000}]', 0, 530000, 530000, 300.00, '', '2025-03-02 23:21:26', ''),
+(129, 59, 0, 67, '[{\"id\":\"646\",\"descripcion\":\"Router N300 Ruijie\",\"cantidad\":\"1\",\"stock\":\"8\",\"precio\":\"95000\",\"total\":95000},{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"2\",\"stock\":\"29\",\"precio\":\"120000\",\"total\":240000}]', 0, 335000, 0, 120.00, '', '2025-03-02 23:21:26', ''),
+(130, 60, 0, 67, '[{\"id\":\"224\",\"descripcion\":\"Cargadores de Pila Ironbat 3600 mAh\",\"cantidad\":\"2\",\"stock\":\"0\",\"precio\":\"40000\",\"total\":80000},{\"id\":\"268\",\"descripcion\":\"FIRE TV Stick HD\",\"cantidad\":\"1\",\"stock\":\"6\",\"precio\":\"140000\",\"total\":140000},{\"id\":\"791\",\"descripcion\":\"Parlantes MYM TD063US\",\"cantidad\":\"1\",\"stock\":\"11\",\"precio\":\"45000\",\"total\":45000},{\"id\":\"712\",\"descripcion\":\"Tablet Smart King Tab S25 \",\"cantidad\":\"1\",\"stock\":\"1\",\"precio\":\"400000\",\"total\":400000}]', 0, 665000, 665000, 400.00, '', '2025-03-02 23:21:26', ''),
+(131, 61, 0, 67, '[{\"id\":\"79\",\"descripcion\":\"Audífonos Maxell Airlink\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"125000\",\"total\":125000},{\"id\":\"150\",\"descripcion\":\"Batería Recargable Sony AA 2700 mAh \",\"cantidad\":\"2\",\"stock\":\"12\",\"precio\":\"15000\",\"total\":30000},{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"1\",\"stock\":\"6\",\"precio\":\"110000\",\"total\":110000},{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"3\",\"stock\":\"138\",\"precio\":\"135000\",\"total\":405000},{\"id\":\"783\",\"descripcion\":\"Manos Libres para C1 Tipo Escolta\",\"cantidad\":\"4\",\"stock\":\"52\",\"precio\":\"20000\",\"total\":80000}]', 0, 750000, 750000, 20.00, '', '2025-03-03 23:27:32', ''),
+(132, 62, 0, 67, '[{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"140000\",\"total\":140000},{\"id\":\"175\",\"descripcion\":\"Cables para Celular\",\"cantidad\":\"1\",\"stock\":\"58\",\"precio\":\"10000\",\"total\":10000},{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"7\",\"stock\":\"131\",\"precio\":\"146000\",\"total\":1022000},{\"id\":\"360\",\"descripcion\":\"Molino de Café NM-8300\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"35000\",\"total\":35000},{\"id\":\"429\",\"descripcion\":\"Parlante JBL Flip 6\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"390000\",\"total\":390000},{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"1\",\"stock\":\"28\",\"precio\":\"120000\",\"total\":120000},{\"id\":\"115\",\"descripcion\":\"Audífonos Sony C500\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"160000\",\"total\":160000}]', 0, 1877000, 1877000, 160.00, '', '2025-03-03 23:27:32', ''),
+(133, 63, 0, 67, '[{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"1\",\"stock\":\"27\",\"precio\":\"110000\",\"total\":110000}]', 0, 110000, 110000, 110.00, '', '2025-03-03 23:27:32', ''),
+(134, 64, 0, 1, '[{\"id\":\"30\",\"descripcion\":\"Audífonos AirPods con Pantalla ANC ENC\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"70000\",\"total\":70000},{\"id\":\"402\",\"descripcion\":\"Parlante Charge 4 Réplica\",\"cantidad\":\"20\",\"stock\":\"22\",\"precio\":\"30000\",\"total\":600000},{\"id\":\"383\",\"descripcion\":\"Onn Watch 4K\",\"cantidad\":\"1\",\"stock\":\"16\",\"precio\":\"140000\",\"total\":140000},{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"125000\",\"total\":125000}]', 0, 935000, 0, 125.00, '', '2025-03-03 23:27:32', ''),
+(135, 65, 0, 1, '[{\"id\":\"393\",\"descripcion\":\"Parlante Alexa Echo Show 5 Pulgadas\",\"cantidad\":\"1\",\"stock\":\"8\",\"precio\":\"300000\",\"total\":300000},{\"id\":\"286\",\"descripcion\":\"Grabadora Tipo Periodista Sony Usadas 440\",\"cantidad\":\"1\",\"stock\":\"29\",\"precio\":\"90000\",\"total\":90000},{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"2\",\"stock\":\"2\",\"precio\":\"125000\",\"total\":250000}]', 0, 640000, 640000, 125.00, '', '2025-03-03 23:27:32', ''),
+(136, 66, 0, 67, '[{\"id\":\"293\",\"descripcion\":\"Interruptores Alexa X3\",\"cantidad\":\"7\",\"stock\":\"3\",\"precio\":\"55000\",\"total\":385000},{\"id\":\"291\",\"descripcion\":\"Interruptores Alexa X1\",\"cantidad\":\"4\",\"stock\":\"10\",\"precio\":\"50000\",\"total\":200000},{\"id\":\"415\",\"descripcion\":\"Parlante Google Next Mini\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"170000\",\"total\":170000},{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"1\",\"stock\":\"130\",\"precio\":\"140000\",\"total\":140000}]', 0, 895000, 895000, 140.00, '', '2025-03-04 23:36:03', ''),
+(137, 67, 0, 1, '[{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"3\",\"stock\":\"24\",\"precio\":\"113333.34\",\"total\":340000.02},{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"1\",\"stock\":\"129\",\"precio\":\"200000\",\"total\":200000},{\"id\":\"314\",\"descripcion\":\"Memoria Micro SD Harvic 16Gb \",\"cantidad\":\"1\",\"stock\":\"28\",\"precio\":\"15000\",\"total\":15000},{\"id\":\"185\",\"descripcion\":\"Cámara Espía Botón\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"35000\",\"total\":35000}]', 0, 590000, 590000, 35.00, '', '2025-03-04 23:36:03', ''),
+(138, 68, 0, 1, '[{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"2\",\"stock\":\"127\",\"precio\":\"135000\",\"total\":270000},{\"id\":\"123\",\"descripcion\":\"Audífonos Sony WHCH 520 Original\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"130000\",\"total\":130000},{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"2\",\"stock\":\"22\",\"precio\":\"110000\",\"total\":220000},{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"1\",\"stock\":\"1\",\"precio\":\"135000\",\"total\":135000},{\"id\":\"735\",\"descripcion\":\"USB Bluetooth\",\"cantidad\":\"1\",\"stock\":\"1\",\"precio\":\"15000\",\"total\":15000}]', 0, 770000, 770000, 15.00, '', '2025-03-04 23:36:03', ''),
+(139, 69, 0, 67, '[{\"id\":\"796\",\"descripcion\":\"PowerBank Harvic 20000mAh PB610\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"70000\",\"total\":70000},{\"id\":\"382\",\"descripcion\":\"Onn Réplica 4K\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"110000\",\"total\":110000},{\"id\":\"783\",\"descripcion\":\"Manos Libres para C1 Tipo Escolta\",\"cantidad\":\"3\",\"stock\":\"49\",\"precio\":\"20000\",\"total\":60000}]', 0, 240000, 240000, 20.00, '', '2025-03-05 23:39:57', ''),
+(140, 70, 0, 1, '[{\"id\":\"267\",\"descripcion\":\"Fire TV Stick 4K\",\"cantidad\":\"2\",\"stock\":\"4\",\"precio\":\"152500\",\"total\":305000},{\"id\":\"599\",\"descripcion\":\"Radio Grabadora Pu Xing PX-3600BT\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"90000\",\"total\":90000},{\"id\":\"248\",\"descripcion\":\"Convertidor TV Stick Fly 8K\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"100000\",\"total\":100000},{\"id\":\"76\",\"descripcion\":\"Audífonos M25\",\"cantidad\":\"1\",\"stock\":\"19\",\"precio\":\"65000\",\"total\":65000},{\"id\":\"247\",\"descripcion\":\"Convertidor Smart Skyworth 4K\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"130000\",\"total\":130000},{\"id\":\"383\",\"descripcion\":\"Onn Watch 4K\",\"cantidad\":\"3\",\"stock\":\"13\",\"precio\":\"140000\",\"total\":420000},{\"id\":\"384\",\"descripcion\":\"Onn Watch HD\",\"cantidad\":\"3\",\"stock\":\"19\",\"precio\":\"120000\",\"total\":360000}]', 0, 1470000, 1470000, 120.00, '', '2025-03-05 23:39:57', ''),
+(141, 71, 0, 67, '[{\"id\":\"783\",\"descripcion\":\"Manos Libres para C1 Tipo Escolta\",\"cantidad\":\"2\",\"stock\":\"47\",\"precio\":\"20000\",\"total\":40000},{\"id\":\"310\",\"descripcion\":\"Manos Libres para C1\",\"cantidad\":\"3\",\"stock\":\"28\",\"precio\":\"10000\",\"total\":30000},{\"id\":\"291\",\"descripcion\":\"Interruptores Alexa X1\",\"cantidad\":\"2\",\"stock\":\"8\",\"precio\":\"50000\",\"total\":100000},{\"id\":\"292\",\"descripcion\":\"Interruptores Alexa X2\",\"cantidad\":\"1\",\"stock\":\"8\",\"precio\":\"60000\",\"total\":60000},{\"id\":\"312\",\"descripcion\":\"Memoria Escandaloso 32Gb\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"20000\",\"total\":20000}]', 0, 250000, 250000, 20.00, '', '2025-03-07 23:43:11', ''),
+(142, 72, 0, 67, '[{\"id\":\"783\",\"descripcion\":\"Manos Libres para C1 Tipo Escolta\",\"cantidad\":\"1\",\"stock\":\"46\",\"precio\":\"20000\",\"total\":20000},{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"3\",\"stock\":\"124\",\"precio\":\"140000\",\"total\":420000},{\"id\":\"514\",\"descripcion\":\"Patillera VGR V091\",\"cantidad\":\"1\",\"stock\":\"15\",\"precio\":\"80000\",\"total\":80000},{\"id\":\"345\",\"descripcion\":\"Micrófono NK MA-300\",\"cantidad\":\"2\",\"stock\":\"0\",\"precio\":\"20000\",\"total\":40000},{\"id\":\"355\",\"descripcion\":\"Micrófonos para Celular K8\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"30000\",\"total\":30000}]', 0, 590000, 590000, 30.00, '', '2025-03-07 23:44:44', ''),
+(143, 73, 0, 1, '[{\"id\":\"315\",\"descripcion\":\"Memoria Micro SD Harvic 32Gb \",\"cantidad\":\"1\",\"stock\":\"45\",\"precio\":\"20000\",\"total\":20000},{\"id\":\"314\",\"descripcion\":\"Memoria Micro SD Harvic 16Gb \",\"cantidad\":\"3\",\"stock\":\"25\",\"precio\":\"15000\",\"total\":45000},{\"id\":\"688\",\"descripcion\":\"Smart Watch Ultra 7 Pulsos\",\"cantidad\":\"1\",\"stock\":\"31\",\"precio\":\"75000\",\"total\":75000},{\"id\":\"660\",\"descripcion\":\"Secador Revlon 5005\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"100000\",\"total\":100000},{\"id\":\"273\",\"descripcion\":\"Game TV Stick 8k\",\"cantidad\":\"1\",\"stock\":\"5\",\"precio\":\"130000\",\"total\":130000},{\"id\":\"697\",\"descripcion\":\"Tablet Alcatel 1T7\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"180000\",\"total\":180000},{\"id\":\"789\",\"descripcion\":\"Radio Sony P27\",\"cantidad\":\"1\",\"stock\":\"3\",\"precio\":\"190000\",\"total\":190000},{\"id\":\"329\",\"descripcion\":\"Memoria USB Kingston 123Gb\",\"cantidad\":\"1\",\"stock\":\"1\",\"precio\":\"40000\",\"total\":40000},{\"id\":\"591\",\"descripcion\":\"Radio de Comunicación Motorola C1\",\"cantidad\":\"10\",\"stock\":\"114\",\"precio\":\"140000\",\"total\":1400000},{\"id\":\"234\",\"descripcion\":\"Chromecast 4K\",\"cantidad\":\"1\",\"stock\":\"1\",\"precio\":\"280000\",\"total\":280000},{\"id\":\"263\",\"descripcion\":\"Estuches de Control Chromecast\",\"cantidad\":\"1\",\"stock\":\"2\",\"precio\":\"15000\",\"total\":15000},{\"id\":\"135\",\"descripcion\":\"Audífonos Xioami Redmi Buds 6 Lite\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"120000\",\"total\":120000}]', 0, 2595000, 2595000, 120.00, '', '2025-03-07 23:47:35', ''),
+(144, 74, 0, 1, '[{\"id\":\"273\",\"descripcion\":\"Game TV Stick 8k\",\"cantidad\":\"1\",\"stock\":\"4\",\"precio\":\"120000\",\"total\":120000},{\"id\":\"644\",\"descripcion\":\"Router Huawei AR161\",\"cantidad\":\"1\",\"stock\":\"0\",\"precio\":\"150000\",\"total\":150000}]', 0, 270000, 270000, 150.00, '', '2025-03-07 23:47:59', '');
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categorias`
+-- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `clientes`
+-- Indices de la tabla `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `productos`
+-- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ventas`
+-- Indices de la tabla `ventas`
 --
 ALTER TABLE `ventas`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categorias`
+-- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `clientes`
+-- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `productos`
+-- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=789;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=809;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
--- AUTO_INCREMENT for table `ventas`
+-- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
