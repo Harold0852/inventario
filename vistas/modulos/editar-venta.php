@@ -157,7 +157,7 @@
 
                             <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
                    
-                            <input type="text" class="form-control nuevoPrecioProducto" precioReal="'.$respuesta["precio_venta"].'" name="nuevoPrecioProducto" value="'.$value["total"].'" readonly required>
+                            <input type="text" class="form-control nuevoPrecioProducto" precioReal="'.$respuesta["precio_venta"].'" name="nuevoPrecioProducto" value="'.$value["total"].'" required>
    
                           </div>
                
@@ -488,3 +488,19 @@ MODAL AGREGAR CLIENTE
   </div>
 
 </div>
+
+<script>
+document.querySelectorAll('.nuevoPrecioProducto').forEach(input => {
+	input.addEventListener('change', actualizarNeto);
+});
+
+function actualizarNeto() {
+	let totalNeto = 0;
+	document.querySelectorAll('.nuevoPrecioProducto').forEach(input => {
+		totalNeto += parseFloat(input.value);
+	});
+	document.getElementById('nuevoPrecioNeto').value = totalNeto.toFixed(2);
+	document.getElementById('nuevoTotalVenta').value = totalNeto.toFixed(2); // El neto es el mismo valor de la compra
+	document.getElementById('totalVenta').value = totalNeto.toFixed(2);
+}
+</script>
