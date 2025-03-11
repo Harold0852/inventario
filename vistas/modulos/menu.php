@@ -17,6 +17,12 @@
 				<i class="fa fa-user"></i>
 				<span>Usuarios</span>
                 </a>
+			</li>
+			<li class="' . ($current_page == "reporte-usuario" ? "active" : "") . '">
+                <a href="reporte-usuario">
+				<i class="fa fa-file"></i>
+				<span>Reportes de usuarios</span>
+                </a>
 			</li>';
 			}
 
