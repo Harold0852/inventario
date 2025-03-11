@@ -643,7 +643,7 @@ class ControladorVentas{
 
 			// Agregar fila de total acumulado
 			echo utf8_decode("<tr>
-					<td style='border:1px solid #eee;' colspan='4'>Total Acumulado</td>
+					<td style='font-weight:bold; border:1px solid #eee;' colspan='4'>Total Acumulado</td>
 					<td style='border:1px solid #eee;' colspan='5'>".$totalAcumulado."</td>
 					</tr>");
 
