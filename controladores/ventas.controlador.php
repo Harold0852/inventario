@@ -631,8 +631,8 @@ class ControladorVentas{
 		 		}
 
 		 		echo utf8_decode("</td>
-					<td style='border:1px solid #eee;'>$ ".number_format($item["neto"],2)."</td>	
-					<td style='border:1px solid #eee;'>$ ".number_format($item["total"],2)."</td>
+					<td style='border:1px solid #eee;'>".number_format($item["neto"],2)."</td>	
+					<td style='border:1px solid #eee; mso-number-format:\"0\";'>".(int)$item["total"]."</td>
 					<td style='border:1px solid #eee;'>".$item["metodo_pago"]."</td>
 					<td style='border:1px solid #eee;'>".substr($item["fecha"],0,10)."</td>		
 		 			</tr>");
@@ -646,7 +646,6 @@ class ControladorVentas{
 		}
 
 	}
-
 
 	/*=============================================
 	SUMA TOTAL VENTAS
@@ -748,3 +747,4 @@ class ControladorVentas{
 	}
 
 }
+?>

@@ -33,7 +33,8 @@ class ControladorExportarVentas {
             $sheet->setCellValue('B' . $row, $venta['id_vendedor']);
             $sheet->setCellValue('C' . $row, $venta['productos']);
             $sheet->setCellValue('D' . $row, $venta['neto']);
-            $sheet->setCellValue('E' . $row, $venta['total']);
+            $sheet->setCellValue('E' . $row, (int)$venta['total']);
+            $sheet->getStyle('E' . $row)->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_NUMBER);
             $sheet->setCellValue('F' . $row, $venta['metodo_pago']);
             $sheet->setCellValue('G' . $row, $venta['cliente_descripcion']);
             $sheet->setCellValue('H' . $row, $venta['precio_venta']);
