@@ -20,19 +20,19 @@ class ControladorReportes {
             $pdf->SetFont('helvetica', 'B', 12);
 
             // Encabezado
-            $pdf->Cell(40, 10, 'Codigo');
-            $pdf->Cell(60, 10, 'Descripcion');
-            $pdf->Cell(40, 10, 'Categoria');
-            $pdf->Cell(20, 10, 'Stock');
+            $pdf->Cell(40, 10, 'Codigo', 1, 0, 'C');
+            $pdf->Cell(90, 10, 'Descripcion', 1, 0, 'C');
+            $pdf->Cell(40, 10, 'Categoria', 1, 0, 'C');
+            $pdf->Cell(20, 10, 'Stock', 1, 0, 'C');
             $pdf->Ln();
 
             // Datos
             foreach ($productos as $producto) {
                 $categoria = ModeloCategorias::mdlMostrarCategorias("categorias", "id", $producto["id_categoria"]);
-                $pdf->Cell(40, 10, $producto["codigo"]);
-                $pdf->Cell(60, 10, $producto["descripcion"]);
-                $pdf->Cell(40, 10, $categoria["categoria"]);
-                $pdf->Cell(20, 10, $producto["stock"]);
+                $pdf->Cell(40, 10, $producto["codigo"], 1, 0, 'C');
+                $pdf->MultiCell(90, 10, $producto["descripcion"], 1, 'C', 0, 0);
+                $pdf->Cell(40, 10, $categoria["categoria"], 1, 0, 'C');
+                $pdf->Cell(20, 10, $producto["stock"], 1, 0, 'C');
                 $pdf->Ln();
             }
 
