@@ -600,10 +600,11 @@ class ControladorVentas{
 					<td style='font-weight:bold; border:1px solid #eee;'>PRODUCTOS</td>
 					<td style='font-weight:bold; border:1px solid #eee;'>NETO</td>		
 					<td style='font-weight:bold; border:1px solid #eee;'>TOTAL</td>		
-					<td style='font-weight:bold; border:1px solid #eee;'>METODO DE PAGO</td	
+					<td style='font-weight:bold; border:1px solid #eee;'>METODO DE PAGO</td>	
 					<td style='font-weight:bold; border:1px solid #eee;'>FECHA</td>		
 					</tr>");
 
+			$totalAcumulado = 0;
 			foreach ($ventas as $row => $item){
 
 				$cliente = ControladorClientes::ctrMostrarClientes("id", $item["id_cliente"]);
@@ -637,9 +638,14 @@ class ControladorVentas{
 					<td style='border:1px solid #eee;'>".substr($item["fecha"],0,10)."</td>		
 		 			</tr>");
 
-
+				$totalAcumulado += (int)$item["total"];
 			}
 
+			// Agregar fila de total acumulado
+			echo utf8_decode("<tr>
+					<td style='border:1px solid #eee;' colspan='4'>Total Acumulado</td>
+					<td style='border:1px solid #eee;' colspan='5'>".$totalAcumulado."</td>
+					</tr>");
 
 			echo "</table>";
 

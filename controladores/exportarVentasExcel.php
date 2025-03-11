@@ -25,9 +25,11 @@ class ControladorExportarVentas {
         $sheet->setCellValue('F1', 'Método de Pago');
         $sheet->setCellValue('G1', 'Descripción del Cliente');
         $sheet->setCellValue('H1', 'Precio de Venta');
+        $sheet->setCellValue('I1', 'Total Acumulado');
 
         // Datos
         $row = 2;
+        $totalAcumulado = 0;
         foreach ($ventas as $venta) {
             $sheet->setCellValue('A' . $row, $venta['codigo']);
             $sheet->setCellValue('B' . $row, $venta['id_vendedor']);
@@ -38,8 +40,15 @@ class ControladorExportarVentas {
             $sheet->setCellValue('F' . $row, $venta['metodo_pago']);
             $sheet->setCellValue('G' . $row, $venta['cliente_descripcion']);
             $sheet->setCellValue('H' . $row, $venta['precio_venta']);
+            $totalAcumulado += (int)$venta['total'];
+            $sheet->setCellValue('I' . $row, $totalAcumulado);
             $row++;
         }
+
+        // Agregar fila de total acumulado
+        $sheet->setCellValue('A' . $row, 'Total Acumulado');
+        $sheet->setCellValue('E' . $row, $totalAcumulado);
+        $sheet->getStyle('E' . $row)->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_NUMBER);
 
         // Configuración del archivo
         $filename = "Reporte_Ventas_" . date("Y-m-d_H-i-s") . ".xlsx";
