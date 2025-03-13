@@ -19,13 +19,13 @@ if not exist "%backup_file%" (
 )
 
 :: Sube el archivo a Google Drive con la aplicación Rclone
-rclone copy "%backup_file%" drive:/Backups/
+rclone copy "%backup_file%" drive_Database:/Backups/
 
 :: Borra los backups antiguos mayor a de 7 días
 forfiles /P C:\xampp\htdocs\inventario\database\backups /M *.sql /D -7 /C "cmd /c del @file"
 
 :: Borra backups antiguos en Google Drive mayor a de 7 días
-rclone delete --min-age 7d drive:/Backups/
+rclone delete --min-age 7d drive_Database:/Backups/
 
 echo Backup completado correctamente.
 exit

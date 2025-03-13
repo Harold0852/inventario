@@ -40,3 +40,7 @@ Verificar si la extensión GD está habilitada
 
 Usuario: wilmer321
 Contraseña: WilmerWSL987
+
+
+4. Actualizar tabla 'ventas':
+ALTER TABLE `ventas` MODIFY `fecha` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
