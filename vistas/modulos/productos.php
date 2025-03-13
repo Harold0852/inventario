@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["perfil"] == "Vendedor") {
+if ($_SESSION["perfil"] == "Especial") {
 
   echo '<script>
 
@@ -72,7 +72,7 @@ if ($_SESSION["perfil"] == "Vendedor") {
               <th>Stock</th>
               <th>Precio de compra</th>
               <th>Agregado</th>
-              <th>Acciones</th>
+              <?php if ($_SESSION["perfil"] == "Administrador") { echo "<th>Acciones</th>"; } ?>
 
             </tr>
 
@@ -87,25 +87,34 @@ if ($_SESSION["perfil"] == "Vendedor") {
             $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
             foreach ($productos as $key => $value) {
-              echo '<tr>
-                      <td>' . ($key + 1) . '</td>
-                      <td><img src="' . $value["imagen"] . '" class="img-thumbnail" width="40px"></td>
-                      <td>' . $value["codigo"] . '</td>
-                      <td>' . $value["descripcion"] . '</td>
-                      <td>' . $value["categoria"] . '</td>
-                      <td>' . $value["stock"] . '</td>
-                      <td>' . $value["precio_compra"] . '</td>
-                      <td>' . $value["fecha"] . '</td>
-                      <td>
-                        <div class="btn-group">
-                          <button class="btn btn-warning btnEditarProducto" idProducto="' . $value["id"] . '" data-toggle="modal" data-target="#modalEditarProducto"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btnEliminarProducto" idProducto="' . $value["id"] . '" codigo="' . $value["codigo"] . '" imagen="' . $value["imagen"] . '"><i class="fa fa-times"></i></button>
-                        </div>
-                      </td>
-                    </tr>';
+                echo '<tr>
+                        <td>' . ($key + 1) . '</td>
+                        <td><img src="' . $value["imagen"] . '" class="img-thumbnail" width="40px"></td>
+                        <td>' . $value["codigo"] . '</td>
+                        <td>' . $value["descripcion"] . '</td>
+                        <td>' . $value["categoria"] . '</td>
+                        <td>' . $value["stock"] . '</td>
+                        <td>' . $value["precio_compra"] . '</td>
+                        <td>' . $value["fecha"] . '</td>';
+
+                if ($_SESSION["perfil"] == "Administrador") {
+                    echo '<td>
+                            <div class="btn-group">
+                                <button class="btn btn-warning btnEditarProducto" idProducto="' . $value["id"] . '" data-toggle="modal" data-target="#modalEditarProducto">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                                <button class="btn btn-danger btnEliminarProducto" idProducto="' . $value["id"] . '" codigo="' . $value["codigo"] . '" imagen="' . $value["imagen"] . '">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                          </td>';
+                }
+
+                echo '</tr>';
             }
             ?>
-          </tbody>
+        </tbody>
+
 
         </table>
 
