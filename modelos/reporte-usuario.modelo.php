@@ -2,13 +2,15 @@
 
 require_once "conexion.php";
 
-class ModeloReporteUsuario {
+class ModeloReporteUsuario
+{
 
     /*=============================================
     MOSTRAR REPORTES DE USUARIOS
     =============================================*/
 
-    static public function mdlMostrarReportesUsuarios($tabla) {
+    static public function mdlMostrarReportesUsuarios($tabla)
+    {
 
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
@@ -19,14 +21,14 @@ class ModeloReporteUsuario {
         $stmt->close();
 
         $stmt = null;
-
     }
 
     /*=============================================
-    DESCARGAR REPORTE DE VENTAS DE USUARIO ESPESIFICO
+    DESCARGAR REPORTE DE VENTAS DE USUARIO ESPECÍFICO
     =============================================*/
 
-    static public function mdlDescargarReporteVentas($tabla, $idVendedor) {
+    static public function mdlDescargarReporteVentas($tabla, $idVendedor)
+    {
 
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_vendedor = :idVendedor");
 
@@ -39,14 +41,14 @@ class ModeloReporteUsuario {
         $stmt->close();
 
         $stmt = null;
-
     }
 
     /*=============================================
     DESCARGAR REPORTES DE VENTAS DE TODOS LOS USUARIOS
     =============================================*/
 
-    static public function mdlDescargarReportesUsuarios($tabla) {
+    static public function mdlDescargarReportesUsuarios($tabla)
+    {
 
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
@@ -57,8 +59,5 @@ class ModeloReporteUsuario {
         $stmt->close();
 
         $stmt = null;
-
     }
-
 }
-?>
