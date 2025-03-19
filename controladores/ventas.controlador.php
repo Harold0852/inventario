@@ -554,22 +554,17 @@ class ControladorVentas
 
 	public function ctrDescargarReporte()
 	{
-
 		if (isset($_GET["reporte"])) {
 
 			$tabla = "ventas";
 
 			if (isset($_GET["fechaInicial"]) && isset($_GET["fechaFinal"])) {
-
 				$ventas = ModeloVentas::mdlRangoFechasVentas($tabla, $_GET["fechaInicial"], $_GET["fechaFinal"]);
 			} else {
-
 				$item = null;
 				$valor = null;
-
 				$ventas = ModeloVentas::mdlMostrarVentas($tabla, $item, $valor);
 			}
-
 
 			/*=============================================
 			CREAMOS EL ARCHIVO DE EXCEL
@@ -589,63 +584,66 @@ class ControladorVentas
 
 			echo utf8_decode("<table border='0'> 
 
-					<tr> 
-					<td style='font-weight:bold; border:1px solid #eee;'>CÓDIGO</td> 
-					<td style='font-weight:bold; border:1px solid #eee;'>CLIENTE</td>
-					<td style='font-weight:bold; border:1px solid #eee;'>VENDEDOR</td>
-					<td style='font-weight:bold; border:1px solid #eee;'>CANTIDAD</td>
-					<td style='font-weight:bold; border:1px solid #eee;'>PRODUCTOS</td>
-					<td style='font-weight:bold; border:1px solid #eee;'>NETO</td>		
-					<td style='font-weight:bold; border:1px solid #eee;'>TOTAL</td>		
-					<td style='font-weight:bold; border:1px solid #eee;'>METODO DE PAGO</td>	
-					<td style='font-weight:bold; border:1px solid #eee;'>FECHA</td>		
-					</tr>");
+				<tr> 
+				<td style='font-weight:bold; border:1px solid #eee;'>CÓDIGO</td> 
+				<td style='font-weight:bold; border:1px solid #eee;'>CLIENTE</td>
+				<td style='font-weight:bold; border:1px solid #eee;'>VENDEDOR</td>
+				<td style='font-weight:bold; border:1px solid #eee;'>CANTIDAD</td>
+				<td style='font-weight:bold; border:1px solid #eee;'>PRODUCTOS</td>
+				<td style='font-weight:bold; border:1px solid #eee;'>NETO</td>		
+				<td style='font-weight:bold; border:1px solid #eee;'>TOTAL</td>
+				<td style='font-weight:bold; border:1px solid #eee;'>GANANCIA</td>		
+				<td style='font-weight:bold; border:1px solid #eee;'>METODO DE PAGO</td>	
+				<td style='font-weight:bold; border:1px solid #eee;'>FECHA</td>		
+				</tr>");
 
 			$totalAcumulado = 0;
-			foreach ($ventas as $row => $item) {
+			$totalGanancia = 0;
 
+			foreach ($ventas as $row => $item) {
 				$cliente = ControladorClientes::ctrMostrarClientes("id", $item["id_cliente"]);
 				$vendedor = ControladorUsuarios::ctrMostrarUsuarios("id", $item["id_vendedor"]);
 
 				echo utf8_decode("<tr>
-						<td style='border:1px solid #eee;'>" . $item["codigo"] . "</td> 
-						<td style='border:1px solid #eee;'>" . $cliente["nombre"] . "</td>
-						<td style='border:1px solid #eee;'>" . $vendedor["nombre"] . "</td>
-						<td style='border:1px solid #eee;'>");
+					<td style='border:1px solid #eee;'>" . $item["codigo"] . "</td> 
+					<td style='border:1px solid #eee;'>" . $cliente["nombre"] . "</td>
+					<td style='border:1px solid #eee;'>" . $vendedor["nombre"] . "</td>
+					<td style='border:1px solid #eee;'>");
 
-				$productos =  json_decode($item["productos"], true);
-
+				$productos = json_decode($item["productos"], true);
 				foreach ($productos as $key => $valueProductos) {
-
 					echo utf8_decode($valueProductos["cantidad"] . "<br>");
 				}
 
 				echo utf8_decode("</td><td style='border:1px solid #eee;'>");
-
 				foreach ($productos as $key => $valueProductos) {
-
 					echo utf8_decode($valueProductos["descripcion"] . "<br>");
 				}
 
 				echo utf8_decode("</td>
 					<td style='border:1px solid #eee;'>" . number_format($item["neto"], 2) . "</td>	
 					<td style='border:1px solid #eee; mso-number-format:\"0\";'>" . (int)$item["total"] . "</td>
+					<td style='border:1px solid #eee; mso-number-format:\"0\";'>" . (int)$item["ganancia"] . "</td>
 					<td style='border:1px solid #eee;'>" . $item["metodo_pago"] . "</td>
 					<td style='border:1px solid #eee;'>" . substr($item["fecha"], 0, 10) . "</td>		
 					</tr>");
 
 				$totalAcumulado += (int)$item["total"];
+				$totalGanancia += (float)$item["ganancia"];
 			}
 
-			// Agregar fila de total acumulado
+			// Agregar fila de totales
 			echo utf8_decode("<tr>
-					<td style='font-weight:bold; border:1px solid #eee;' colspan='4'>Total Acumulado</td>
-					<td style='border:1px solid #eee;' colspan='5'>" . $totalAcumulado . "</td>
-					</tr>");
+				<td style='font-weight:bold; border:1px solid #eee;' colspan='6'>Total Acumulado</td>
+				<td style='border:1px solid #eee;'>" .  number_format($totalAcumulado, 2) . "</td>
+				<td style='border:1px solid #eee;'>" . number_format($totalGanancia, 2) . "</td>
+				<td style='border:1px solid #eee;' colspan='2'></td>
+				</tr>");
 
 			echo "</table>";
 		}
 	}
+
 
 	/*=============================================
 	SUMA TOTAL VENTAS

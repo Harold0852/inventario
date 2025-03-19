@@ -42,5 +42,66 @@ Usuario: wilmer321
 Contraseña: WilmerWSL987
 
 
-4. Actualizar tabla 'ventas':
+4. Actualizar tabla 'ventas' para modificar fecha:
 ALTER TABLE `ventas` MODIFY `fecha` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+
+5. Actualizar tabla 'ventas' para modificar precio_compra: - Alter ego
+-- 1. Agregar la columna precio_compra_total en la tabla ventas
+ALTER TABLE ventas ADD COLUMN precio_compra_total FLOAT NOT NULL DEFAULT 0;
+
+-- 2. Modificar la inserción para calcular precio_compra_total automáticamente
+DELIMITER //
+CREATE TRIGGER before_insert_ventas
+BEFORE INSERT ON ventas
+FOR EACH ROW
+BEGIN
+    DECLARE total_compra FLOAT DEFAULT 0;
+    DECLARE json_data TEXT;
+    DECLARE product_id INT;
+    DECLARE product_qty INT;
+    DECLARE product_price FLOAT;
+    DECLARE i INT DEFAULT 0;
+    DECLARE json_length INT;
+    
+    -- Obtener la cantidad de productos en la venta
+    SET json_data = NEW.productos;
+    SET json_length = JSON_LENGTH(json_data);
+    
+    -- Recorrer cada producto en la venta
+    WHILE i < json_length DO
+        SET product_id = JSON_UNQUOTE(JSON_EXTRACT(json_data, CONCAT('$[', i, '].id')));
+        SET product_qty = JSON_UNQUOTE(JSON_EXTRACT(json_data, CONCAT('$[', i, '].cantidad')));
+        
+        -- Obtener el precio_compra del producto desde la tabla productos
+        SELECT precio_compra INTO product_price FROM productos WHERE id = product_id;
+        
+        -- Calcular el total de compra
+        SET total_compra = total_compra + (IFNULL(product_price, 0) * product_qty);
+        
+        SET i = i + 1;
+    END WHILE;
+    
+    -- Asignar el total calculado a la nueva venta
+    SET NEW.precio_compra_total = total_compra;
+END //
+DELIMITER ;
+
+-- 3. Actualizar las ventas existentes para calcular precio_compra_total
+UPDATE ventas v
+JOIN (
+    SELECT v.id AS venta_id, 
+           SUM(JSON_UNQUOTE(JSON_EXTRACT(v.productos, CONCAT('$[', numbers.n, '].cantidad'))) * p.precio_compra) AS total_compra
+    FROM ventas v
+    CROSS JOIN (
+        SELECT 0 AS n UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL 
+        SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL 
+        SELECT 8 UNION ALL SELECT 9
+    ) numbers
+    JOIN productos p 
+    ON JSON_UNQUOTE(JSON_EXTRACT(v.productos, CONCAT('$[', numbers.n, '].id'))) = p.id
+    WHERE JSON_UNQUOTE(JSON_EXTRACT(v.productos, CONCAT('$[', numbers.n, '].id'))) IS NOT NULL
+    GROUP BY v.id
+) subquery ON v.id = subquery.venta_id
+SET v.precio_compra_total = subquery.total_compra;
+
